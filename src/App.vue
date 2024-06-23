@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <HeaderPage />
+
     <router-view />
   </div>
 </template>
 
 <script setup>
 import HeaderPage from './components/HeaderPage.vue'
+import '@/assets/css/main.css' // Assurez-vous d'importer le bon chemin
+import '@/assets/Icomoon/style.css'
 </script>
 
 <style>
@@ -16,6 +19,5 @@ import HeaderPage from './components/HeaderPage.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
