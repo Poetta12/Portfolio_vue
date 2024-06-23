@@ -1,0 +1,53 @@
+@import './base.css';
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#app>div>div {
+  padding: 0 2rem;
+}
+
+*,
+#app>div {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--color-heading);
+  /* Utilisation de la couleur de l'entête définie */
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: var(--color-border-hover);
+    /* Utilisation de la couleur de bordure au survol définie */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* #app>div>div {
+    width: 60%;
+    margin: auto;
+  } */
+}

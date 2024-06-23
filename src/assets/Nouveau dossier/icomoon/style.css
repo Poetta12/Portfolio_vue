@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ieykjf');
+  src:  url('fonts/icomoon.eot?ieykjf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ieykjf') format('truetype'),
+    url('fonts/icomoon.woff?ieykjf') format('woff'),
+    url('fonts/icomoon.svg?ieykjf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-document-file-sql:before {
+  content: "\e900";
+}
+.icon-anaconda:before {
+  content: "\e901";
+  color: #42b029;
+}
+.icon-css3:before {
+  content: "\e902";
+  color: #1572b6;
+}
+.icon-discord:before {
+  content: "\e903";
+  color: #7289da;
+}
+.icon-figma:before {
+  content: "\e904";
+  color: #f24e1e;
+}
+.icon-github:before {
+  content: "\e905";
+}
+.icon-html5:before {
+  content: "\e906";
+  color: #e34f26;
+}
+.icon-java:before {
+  content: "\e907";
+  color: #007396;
+}
+.icon-javascript:before {
+  content: "\e908";
+  color: #f7df1e;
+}
+.icon-laravel:before {
+  content: "\e909";
+  color: #ff2d20;
+}
+.icon-linkedin1:before {
+  content: "\e90a";
+  color: #0077b5;
+}
+.icon-mysql:before {
+  content: "\e90b";
+  color: #4479a1;
+}
+.icon-php:before {
+  content: "\e90c";
+  color: #777bb4;
+}
+.icon-python:before {
+  content: "\e90d";
+  color: #3776ab;
+}
+.icon-sass:before {
+  content: "\e90e";
+  color: #c69;
+}
+.icon-slack:before {
+  content: "\e90f";
+  color: #4a154b;
+}
+.icon-telegram1:before {
+  content: "\e910";
+  color: #2ca5e0;
+}
+.icon-vue-dot-js:before {
+  content: "\e911";
+  color: #4fc08d;
+}
+.icon-whatsapp:before {
+  content: "\e912";
+  color: #25d366;
+}
+.icon-wordpress:before {
+  content: "\e913";
+  color: #21759b;
+}
+.icon-x:before {
+  content: "\e914";
+}
+.icon-twitter:before {
+  content: "\e914";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
