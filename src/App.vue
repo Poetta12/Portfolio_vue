@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app-container">
     <HeaderPage />
-
-    <router-view />
+    <div id="app-body">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -13,11 +14,19 @@ import '@/assets/Icomoon/style.css'
 </script>
 
 <style>
-#app {
+#app-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#app-body{
+  width: 60%;
+  height: 90vh;
+  margin: auto;
+  background-color: #333;
+  box-shadow: 0 0 80px 100px #333;
 }
 </style>

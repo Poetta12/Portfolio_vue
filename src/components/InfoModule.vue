@@ -31,7 +31,7 @@ const infoItems = ref([
   {
     id: 'time',
     title: 'Time',
-    iconClass: 'icon-clock-o',
+    iconClass: 'icon-time',
     content:
       "Le temps est une ressource inestimable que j'utilise avec soin. Je m'engage à gérer efficacement mon temps pour garantir des livraisons de projets ponctuelles et de haute qualité. Mon approche rigoureuse et structurée me permet de respecter les délais tout en maintenant un haut niveau de performance."
   },
@@ -83,6 +83,7 @@ window.onclick = function (event) {
   width: 100%;
   margin: auto;
 }
+
 /* Styles spécifiques au composant InfoModule */
 #myModal {
   width: 100vw !important;
@@ -155,9 +156,12 @@ window.onclick = function (event) {
   font-size: 1.3rem;
   font-weight: bold;
 }
+#bloc1 h4:before {
+  padding-right: 15px;
+}
 
 #bloc1 p {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 #bloc1 article {

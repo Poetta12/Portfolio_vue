@@ -4,7 +4,8 @@ body {
   min-height: 100vh;
   color: #fdc17b;
   /* Couleur du texte */
-  background-color: #181818;
+  /* background-color: #181818; */
+  background-color: white;
   /* Couleur de fond */
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
@@ -26,17 +27,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  font-weight: normal;
-}
-
-/* #app>div>div {
-  padding: 2rem;
-} */
-
 *,
 #app>div {
   padding: 0;
@@ -64,9 +54,5 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
-  /* #app>div>div {
-    width: 60%;
-    margin: auto;
-  } */
-}
+@media (min-width: 1024px) {}
+

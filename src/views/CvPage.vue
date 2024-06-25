@@ -1,10 +1,20 @@
 <template>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Pedro Costa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <div class="container">
         <header>
             <h1>Pedro Costa</h1>
             <h2>Développeur full stack junior</h2>
         </header>
-        <section class="personal-info">
+        <section>
             <h3>Informations personnelles</h3>
             <ul>
                 <li>Email: <a href="mailto:poettawds@gmail.com">poettawds@gmail.com</a></li>
@@ -13,7 +23,7 @@
                 <li>Permis: B</li>
             </ul>
         </section>
-        <section class="links">
+        <section>
             <h3>Mes liens</h3>
             <ul>
                 <li><a href="https://linkedin.com/in/pedronfcosta/">LinkedIn</a></li>
@@ -21,12 +31,12 @@
                 <li><a href="http://www.poettatech.fr/">poettatech.fr</a></li>
             </ul>
         </section>
-        <section class="profile">
+        <section>
             <h3>Profil</h3>
             <p>Actuellement en formation de Développeur Avancé, je recherche une alternance de 12 mois. Dynamique et ayant un excellent sens du contact, j'aime collaborer avec des interlocuteurs variés. Volontaire, je me distingue par mon engagement au service du collectif et mon goût d'apprendre.</p>
             <p>Ma vie est enrichie par le cinéma, l'œnologie, la musique, le football et la musculation, les activités associatives, le théâtre, ainsi que ma dévotion à la lecture.</p>
         </section>
-        <section class="experience">
+        <section>
             <h3>Expérience professionnelle significative</h3>
             <ul>
                 <li><strong>Développeur front-end, CodePhenix, Île-de-France</strong> (janvier 2023 - mars 2024)
@@ -49,7 +59,7 @@
                 </li>
             </ul>
         </section>
-        <section class="education">
+        <section>
             <h3>Formation</h3>
             <ul>
                 <li><strong>Dev Avancé, TP6</strong> (Campus Numérique in the Alps, avr. 2024 - janv. 2026)</li>
@@ -57,7 +67,7 @@
                 <li><strong>Licence - MUC</strong> (Universidade Nova de Lisboa, sept. 2020 - juin 2023)</li>
             </ul>
         </section>
-        <section class="skills">
+        <section>
             <h3>Compétences</h3>
             <ul>
                 <li>JavaScript</li>
@@ -68,7 +78,7 @@
                 <li>Développement agile</li>
             </ul>
         </section>
-        <section class="languages">
+        <section>
             <h3>Langues</h3>
             <ul>
                 <li>Portugais</li>
@@ -77,7 +87,7 @@
                 <li>Espagnol</li>
             </ul>
         </section>
-        <section class="references">
+        <section>
             <h3>Références</h3>
             <ul>
                 <li>Brieuc Lebars, Code Phenix (brieuc@codephenix.com)</li>
@@ -85,20 +95,28 @@
                 <li>Philippe Strapazzon, Campus Numérique in the Alps (philippe.strappazzon@le-campus-numerique.fr)</li>
             </ul>
         </section>
-        <section class="interests">
+        <section>
             <h3>Centres d'intérêt</h3>
             <p>Cinéma, œnologie, musique, football et musculation, activités associatives, théâtre, lecture.</p>
         </section>
     </div>
+</body>
+</html>
 </template>
 
 <script setup></script>
 
 <style scoped>
-
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -113,7 +131,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #333;
 }
 
@@ -129,10 +147,8 @@ section {
 
 section h3 {
     margin-bottom: 10px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #333;
-    border-bottom: 2px solid #666;
-    padding-bottom: 5px;
 }
 
 ul {
@@ -156,42 +172,6 @@ ul li a:hover {
 p {
     margin: 0 0 10px;
 }
-
-.profile p,
-.interests p {
-    margin: 0 0 10px;
-}
-
-.skills ul,
-.languages ul,
-.references ul,
-.education ul {
-    padding-left: 20px;
-}
-
-.skills li,
-.languages li,
-.references li,
-.education li {
-    margin-bottom: 5px;
-}
-
-.experience ul {
-    padding-left: 20px;
-}
-
-.experience li {
-    margin-bottom: 10px;
-}
-
-.experience li ul {
-    padding-left: 20px;
-}
-
-.experience li ul li {
-    list-style-type: disc;
-}
-
 
 
 </style>

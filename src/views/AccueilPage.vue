@@ -21,8 +21,17 @@ h2,
 h1 {
   color: white;
 }
-#accueuil-intro h1 span {
+#accueuil-intro{
+  position:relative;
+  z-index: 1000;
+}
+#accueuil-intro h1{
+  font-size: 4rem;
+}
+#accueuil-intro h2{
   font-size: 2.5rem;
+}
+#accueuil-intro h1 span {
   font-weigth: bold;
   color: #fdc17b;
 }
