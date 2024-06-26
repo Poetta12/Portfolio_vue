@@ -47,6 +47,7 @@ import { ref } from 'vue'
 
 const downloadCV = () => {
   const pdfUrl = 'https://drive.google.com/uc?export=download&id=1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa'
+  window.open(pdfUrl, '_blank')
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
