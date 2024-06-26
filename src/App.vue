@@ -29,4 +29,11 @@ import '@/assets/Icomoon/style.css'
   background-color: #333;
   box-shadow: 0 0 80px 100px #333;
 }
+
+@media (max-width: 768px) {
+  #app-body{
+    width: 100%;
+  
+  }
+}
 </style>

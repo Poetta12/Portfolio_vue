@@ -38,4 +38,7 @@ h1 {
 #accueuil-intro p:last-child {
   font-size: 0.8rem;
 }
+@media (max-width: 768px) {
+  
+}
 </style>

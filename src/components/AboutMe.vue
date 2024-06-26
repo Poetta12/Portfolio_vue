@@ -132,13 +132,19 @@ const viewCV = () => {
 #cv-container div {
   display: flex;
 }
+  #about section#cv-container {
+    width: 100%;
+    flex-direction: row;
+    place-content: space-between;
+    padding: 10px 0 0;
+  }
 .cv-download button {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   text-decoration: none;
-  color: #fff;
-  background-color: #333;
+  color: #333;
+  background-color: #fdc17b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -146,6 +152,7 @@ const viewCV = () => {
 
 .cv-download button:hover {
   background-color: #555;
+  color: #fdc17b;
 }
 
 @media (min-width: 768px) {
@@ -165,11 +172,7 @@ const viewCV = () => {
   #coordonnees {
     margin-top: 0rem;
   }
-  #about section#cv-container {
-    width: 100%;
-    flex-direction: row;
-    place-content: space-between;
-  }
+
 }
 
 @media (min-width: 1024px) {

@@ -142,6 +142,7 @@ window.onclick = function (event) {
   display: flex;
   justify-content: center;
   padding: 0rem !important;
+  background: #333;
 }
 
 #bloc1 section {
@@ -203,6 +204,7 @@ window.onclick = function (event) {
 .read-more:hover {
   background-color: #0056b3;
 }
+
 
 @media (min-width: 768px) {
   #info-module {
