@@ -19,8 +19,8 @@
               <a href="mailto:poettawds@gmail.com">poettawds@gmail.com</a>
             </li>
             <li><span class="icon-phone"></span><a href="tel:+33753812381">07 53 81 23 81</a></li>
-            <li><span class="icon-location1"></span> Annecy, 74</li>
-            <li><span class="icon-v-card"></span> Permis B</li>
+            <li><span class="icon-location1"></span><p> Annecy, 74</p></li>
+            <li><span class="icon-v-card"></span><p> Permis B</p></li>
           </ul>
         </section>
 
@@ -55,13 +55,13 @@ const viewCV = () => {
 </script>
 
 <style scoped>
+
 #about {
   width: 100%;
   margin: auto;
-  background-color: #f9f9f9;
   text-align: center;
   padding: 1rem 2rem;
-  background-color: #181818; /* Couleur de fond */
+  background-color: #333; /* Couleur de fond */
   color: #fdc17b; /* Couleur de texte */
 }
 
@@ -93,23 +93,32 @@ const viewCV = () => {
 }
 
 #about h2 {
-  font-size: 2rem;
+  font-size: rem;
 }
 
 #about h6 {
   font-size: 1rem;
-  color: #555;
+  color: white;
+}
+
+#about section article:last-child li {
+  display: flex;
+  align-items: center;
+}
+
+#about section article:last-child li p, #about section article:last-child li a{
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+#about section article:last-child li span{
+  padding-right: 10px;
 }
 
 #coordonnees {
   margin-top: 1rem;
   text-align: left;
-}
-
-#coordonnees p,
-#coordonnees a {
-  margin: 0.5rem 0;
-  font-size: 1rem;
 }
 
 #cv-container div {
@@ -132,9 +141,6 @@ const viewCV = () => {
 }
 
 @media (min-width: 768px) {
-  #about {
-    width: 100%;
-  }
   #about > section {
     height: 100%;
     flex-direction: row;
@@ -147,6 +153,7 @@ const viewCV = () => {
     flex-direction: column;
     align-items: center;
   }
+  
   #coordonnees {
     margin-top: 0rem;
   }
@@ -158,8 +165,6 @@ const viewCV = () => {
 }
 
 @media (min-width: 1024px) {
-  #about[data-v-989c27d0] {
-    width: 60%;
-  }
+  
 }
 </style>

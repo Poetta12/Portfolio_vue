@@ -1,4 +1,4 @@
-<template>
+  <template>
   <header>
     <div id="header-container">
       <div class="logo">
@@ -52,6 +52,8 @@ header {
   padding: 1rem;
   background-color: #333;
   color: #fff;
+  box-shadow: 0 0 80px 100px #333;
+  margin: -15px;
 }
 
 #header-reseaux {
@@ -79,7 +81,7 @@ header {
 }
 
 .logo {
-  width: 75px; /* Ajuster la taille du logo */
+  width: 100px; /* Ajuster la taille du logo */
 }
 
 .logo img {
@@ -157,6 +159,14 @@ header {
   display: none; /* Afficher le bouton seulement en mode mobile */
 }
 
+#header-container a{
+  font-size: 1.5rem;
+}
+
+#header-reseaux a{
+  font-size: 2.5rem;
+}
+
 @media (max-width: 768px) {
   .menu-button.hide-desktop {
     display: flex; /* Afficher le bouton seulement en mode mobile */
@@ -193,5 +203,10 @@ header {
   .main-nav ul li {
     margin: 0.5rem 0;
   }
+
+  #header-reseaux a {
+    font-size: 2rem;
+  }
+
 }
 </style>
