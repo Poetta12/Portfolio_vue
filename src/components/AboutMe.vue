@@ -46,8 +46,7 @@
 import { ref } from 'vue'
 
 const downloadCV = () => {
-  const pdfUrl =
-    'https://drive.google.com/file/d/1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa/view?usp=drive_link'
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa'
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
@@ -57,8 +56,7 @@ const downloadCV = () => {
 }
 
 const viewCV = () => {
-  const pdfUrl =
-    'https://drive.google.com/file/d/1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa/view?usp=drive_link'
+  const pdfUrl = 'https://drive.google.com/file/d/1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa/view'
   window.open(pdfUrl, '_blank')
 }
 </script>
@@ -131,7 +129,7 @@ const viewCV = () => {
 }
 
 #cv-container div {
-  dispay: flex;
+  display: flex;
 }
 .cv-download button {
   margin: 0.5rem;

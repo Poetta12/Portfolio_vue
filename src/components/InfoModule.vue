@@ -166,7 +166,7 @@ window.onclick = function (event) {
 
 #bloc1 article {
   /* width: 50%; */
-  height: 200px;
+  height: 150px;
   text-align: justify;
   position: relative;
   box-sizing: border-box;
