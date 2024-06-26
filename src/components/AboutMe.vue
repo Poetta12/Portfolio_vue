@@ -19,8 +19,14 @@
               <a href="mailto:poettawds@gmail.com">poettawds@gmail.com</a>
             </li>
             <li><span class="icon-phone"></span><a href="tel:+33753812381">07 53 81 23 81</a></li>
-            <li><span class="icon-location1"></span><p> Annecy, 74</p></li>
-            <li><span class="icon-v-card"></span><p> Permis B</p></li>
+            <li>
+              <span class="icon-location1"></span>
+              <p>Annecy, 74</p>
+            </li>
+            <li>
+              <span class="icon-v-card"></span>
+              <p>Permis B</p>
+            </li>
           </ul>
         </section>
 
@@ -40,7 +46,8 @@
 import { ref } from 'vue'
 
 const downloadCV = () => {
-  const pdfUrl = 'src/assets/docs/CV-Pedro_Costa.pdf' // Mettez à jour le chemin si nécessaire
+  const pdfUrl =
+    'https://drive.google.com/file/d/1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa/view?usp=drive_link'
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
@@ -50,12 +57,13 @@ const downloadCV = () => {
 }
 
 const viewCV = () => {
-  // Code pour afficher le CV, si nécessaire
+  const pdfUrl =
+    'https://drive.google.com/file/d/1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa/view?usp=drive_link'
+  window.open(pdfUrl, '_blank')
 }
 </script>
 
 <style scoped>
-
 #about {
   width: 100%;
   margin: auto;
@@ -106,13 +114,14 @@ const viewCV = () => {
   align-items: center;
 }
 
-#about section article:last-child li p, #about section article:last-child li a{
+#about section article:last-child li p,
+#about section article:last-child li a {
   font-size: 1.3rem;
   margin: 0;
   padding: 0;
 }
 
-#about section article:last-child li span{
+#about section article:last-child li span {
   padding-right: 10px;
 }
 
@@ -153,7 +162,7 @@ const viewCV = () => {
     flex-direction: column;
     align-items: center;
   }
-  
+
   #coordonnees {
     margin-top: 0rem;
   }
@@ -165,6 +174,5 @@ const viewCV = () => {
 }
 
 @media (min-width: 1024px) {
-  
 }
 </style>
