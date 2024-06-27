@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-
         <div id="left-side">
             <section class="personal-info">
                 <h3>Informations personnelles</h3>
@@ -17,7 +16,7 @@
                 <ul>
                     <li class="icon-github"><a href="https://linkedin.com/in/pedronfcosta/">LinkedIn</a></li>
                     <li class="icon-linkedin"><a href="https://github.com/Poetta12">GitHub</a></li>
-                    <li class="icon-x"><a href="https://x.com/poettawds" >X / Twitter</a></li>
+                    <li class="icon-x"><a href="https://x.com/poettawds">X / Twitter</a></li>
                     <li class="icon-profile"><a href="http://www.poettatech.fr/">poettatech.fr</a></li>
                 </ul>
             </section>
@@ -58,7 +57,6 @@
                     <li class="tooltip"><img src="/src/assets/logos/spain.jpg" alt="Espagnol"><span class="tooltiptext">Español</span></li>
                 </ul>
             </section>
-            
         </div>
         <div id="right-side">
             <header>
@@ -115,66 +113,86 @@
 import jsLogo from '@/assets/logos/js.png'; // Utilisation d'un chemin d'importation absolu avec Vite
 </script>
 
+
 <style scoped>
 
 
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
 .container {
     display: flex;
+    
+    flex-wrap: wrap; /* Permet de passer en colonne sur les petits écrans */
     width: 100%;
     max-width: 900px;
     margin: 20px auto;
-    /*padding: 20px;*/
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Empêche le débordement */
 }
 
-#left-side{
-    width: 35%;
-    background: #333;
-    color: #fff;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    text-align: left;
+#left-side,
+#right-side {
     padding: 20px;
 }
 
-#left-side h3{
+#left-side {
+    width: 35%;
+    background: #333;
+    color: #fff;
+}
+
+#left-side h3 {
     color: rgb(253, 193, 123);
+}
+
+#left-side ul {
+    list-style: none;
 }
 
 #left-side ul li a {
     padding-left: 10px;
+    color: #a2cbf5;
+    text-decoration: none;
 }
 
-#right-side{
+#left-side ul li a:hover {
+    text-decoration: underline;
+}
+
+#right-side {
     width: 65%;
-    padding: 20px;
-    text-align: left;
+    background: #fff;
 }
 
-#right-side header {
-    text-align: left;
-    margin-bottom: 20px;
+header {
     background: rgb(253, 193, 123);
-    margin-top: 20px;
     padding: 20px;
-    margin-left: -20px;
-    width: 100%;
     border-radius: 0 100px 100px 0;
-    line-height: 1;
+    margin-bottom: 20px;
 }
 
-#right-side header h1 {
-    margin: 0;
+header h1 {
     font-size: 2.5em;
+    margin-bottom: 10px;
     color: #333;
 }
 
-#right-side header h2 {
-    margin: 0;
+header h2 {
     font-size: 1.5em;
     color: #666;
 }
@@ -184,73 +202,27 @@ section {
 }
 
 section h3 {
-    margin-bottom: 10px;
     font-size: 1.4em;
     color: #333;
     border-bottom: 2px solid #666;
     padding-bottom: 5px;
-    text-align: left;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
     margin-bottom: 10px;
 }
 
-ul li a {
-    color: #a2cbf5;
-    text-decoration: none;
+.skills ul,
+.languages ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
 }
 
-ul li a:hover {
-    text-decoration: underline;
-}
-
-p {
-    margin: 0 0 10px;
-}
-
-.profile p,
-.interests p {
-    margin: 0 0 10px;
-}
-
-.skills li,
-.languages li,
-.references li,
-.education li {
-    margin-bottom: 5px;
-}
-
-.skills img, .languages img{
+.skills img,
+.languages img {
     width: 64px;
     height: 64px;
     background: #fff;
 }
-
-.skills ul, .languages ul{
-    display: flex;
-    flex-wrap: wrap;
-    place-content: space-between;
-    text-align: center;
-}
-
-.experience li {
-    margin-bottom: 10px;
-}
-
-.experience li ul {
-    padding-left: 20px;
-}
-
-.experience li ul li {
-    list-style-type: disc;
-}
-
 
 .tooltip {
     position: relative;
@@ -269,7 +241,7 @@ p {
     z-index: 1;
     bottom: 125%; /* Positionne le tooltip au-dessus de l'élément */
     left: 50%;
-    margin-left: -40px; /* Centre le tooltip */
+    margin-left: -75px; /* Centre le tooltip */
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -282,7 +254,7 @@ p {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: rgb(253, 193, 123) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
@@ -290,49 +262,24 @@ p {
     opacity: 1;
 }
 
-.skills img, .languages img {
-    width: 64px;
-    height: 64px;
-    background: #fff;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    max-width: 900px;
-    margin: 20px auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.skills ul, .languages ul {
-    display: flex;
-    flex-wrap: wrap;
-    place-content: space-between;
-    text-align: center;
-}
-
 @media (max-width: 768px) {
     .container {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
-    #left-side{
+    #left-side {
+        
         width: 100%;
-        background: #333;
-        color: #fff;
-        border-left: 1px solid white;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        text-align: left;
-        padding: 20px;
     }
-    #right-side{
+
+    #right-side {
+        order: -1; /* Met #left-side avant #right-side */
         width: 100%;
-        padding: 20px;
-        text-align: left;
+    }
+
+    header {
+        border-radius: 0;
+        text-align: center;
     }
 }
-
 </style>

@@ -1,4 +1,4 @@
-  <template>
+<template>
   <header>
     <div id="header-container">
       <div class="logo">
@@ -52,7 +52,7 @@ header {
   padding: 1rem;
   background-color: #333;
   color: #fff;
-  height: 10vh;
+  height: 12vh;
 }
 
 header::before,
@@ -105,7 +105,7 @@ header::after {
 }
 
 .logo {
-  width: 100px; /* Ajuster la taille du logo */
+  width: 75px; /* Ajuster la taille du logo */
 }
 
 .logo img {
@@ -165,16 +165,19 @@ header::after {
 
 .main-nav ul li {
   margin-left: 1rem;
+  width: 100%;
 }
 
 .main-nav ul li a {
+  display: inline-block;
+  width: 100%;
   text-decoration: none;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   transition: background-color 0.3s ease;
 }
 
-.main-nav ul li a:hover {
+.main-nav ul li:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
@@ -183,11 +186,11 @@ header::after {
   display: none; /* Afficher le bouton seulement en mode mobile */
 }
 
-#header-container a{
+#header-container a {
   font-size: 1.5rem;
 }
 
-#header-reseaux a{
+#header-reseaux a {
   font-size: 2.5rem;
 }
 
@@ -204,11 +207,12 @@ header::after {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     flex-direction: column;
-    justify-content: flex-start;
+    place-content: start;
     align-items: flex-end;
     z-index: 999; /* Assurez-vous que le menu est au-dessus du contenu */
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Empêche le débordement */
   }
 
   .main-nav.show {
@@ -216,9 +220,10 @@ header::after {
   }
 
   .main-nav ul {
+    text-align: right;
     flex-direction: column;
-    align-items: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
+
     padding: 0.3rem;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px 0 0 10px;
@@ -236,8 +241,5 @@ header::after {
   header::after {
     box-shadow: none;
   }
-
-  
-
 }
 </style>

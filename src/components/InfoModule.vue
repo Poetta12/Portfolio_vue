@@ -136,8 +136,9 @@ window.onclick = function (event) {
 #bloc1 {
   display: flex;
   justify-content: center;
-  padding: 0rem !important;
+  padding: 0 1rem !important;
   background: #333;
+  padding: 0 10px;
 }
 
 #bloc1 section {
