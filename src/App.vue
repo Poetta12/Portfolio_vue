@@ -22,7 +22,7 @@ import '@/assets/Icomoon/style.css'
   color: #2c3e50;
 }
 
-#app-body{
+#app-body {
   width: 60%;
   margin: auto;
   background-color: #333;
@@ -30,9 +30,8 @@ import '@/assets/Icomoon/style.css'
 }
 
 @media (max-width: 768px) {
-  #app-body{
+  #app-body {
     width: 100%;
-  
   }
 }
 </style>

@@ -33,8 +33,11 @@
         <section id="cv-container" class="cv-download">
           <h2>CV</h2>
           <div>
-            <button id="goCV" class="icon-eye" @click="viewCV"></button>
-            <button class="icon-download2" @click="downloadCV"></button>
+            <!-- Utilisation de router-link pour naviguer vers /cv -->
+            <router-link to="/cv" @click="closeMenu">
+              <button class="icon-eye-plus"></button>
+            </router-link>
+            <button class="icon-document-download1" @click="downloadCV"></button>
           </div>
         </section>
       </article>
@@ -44,6 +47,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const downloadCV = () => {
   const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
@@ -55,9 +61,9 @@ const downloadCV = () => {
   document.body.removeChild(link)
 }
 
-const viewCV = () => {
-  const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
-  window.open(pdfUrl, '_blank')
+const closeMenu = () => {
+  // Éventuellement, vous pouvez implémenter ici la logique pour fermer un menu
+  // si nécessaire lorsque l'utilisateur clique sur le bouton Consulter.
 }
 </script>
 
@@ -86,7 +92,7 @@ const viewCV = () => {
   left: 10px;
 }
 
-#coord{
+#coord {
   font-size: 2rem;
   padding-top: 10px;
   line-height: 1;
@@ -136,28 +142,31 @@ const viewCV = () => {
   text-align: left;
 }
 
-#cv-container div {
+section#cv-container {
   display: flex;
 }
-  #about section#cv-container {
-    width: 100%;
-    flex-direction: row;
-    place-content: space-between;
-    padding: 10px 0 0;
-  }
-.cv-download button {
-  margin: 0.5rem;
+
+#about section#cv-container {
+  width: 100%;
+  flex-direction: row;
+  place-content: space-between;
+  padding: 10px 0 0;
+}
+
+#cv-container button {
+  margin: 0;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: #333;
   background-color: #fdc17b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 75px;
 }
 
-.cv-download button:hover {
+#cv-container .cv-download button:hover {
   background-color: #555;
   color: #fdc17b;
 }
@@ -179,7 +188,6 @@ const viewCV = () => {
   #coordonnees {
     margin-top: 0rem;
   }
-
 }
 
 @media (min-width: 1024px) {
