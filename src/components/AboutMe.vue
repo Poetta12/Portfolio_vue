@@ -5,7 +5,7 @@
         <div id="profil-photo">
           <img src="@/assets/img/Pedro-COSTA.png" alt="Pedro Costa" />
         </div>
-        <div>
+        <div id="coord">
           <h2>PEDRO COSTA</h2>
           <h6>DEVELOPPEUR FULL STACK JR</h6>
         </div>
@@ -46,8 +46,7 @@
 import { ref } from 'vue'
 
 const downloadCV = () => {
-  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa'
-  window.open(pdfUrl, '_blank')
+  const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
@@ -57,19 +56,19 @@ const downloadCV = () => {
 }
 
 const viewCV = () => {
-  const pdfUrl = 'https://drive.google.com/file/d/1QOrGDIppVtAQoQGcUNvE1hkEGfejFiSa/view'
+  const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
   window.open(pdfUrl, '_blank')
 }
 </script>
 
 <style scoped>
 #about {
-  width: 100%;
+  width: 70%;
   margin: auto;
   text-align: center;
-  padding: 1rem 2rem;
-  background-color: #333; /* Couleur de fond */
-  color: #fdc17b; /* Couleur de texte */
+  padding: 3rem 0 1rem;
+  background-color: #333;
+  color: #fdc17b;
 }
 
 #profil-photo {
@@ -85,6 +84,12 @@ const viewCV = () => {
   position: absolute;
   top: -30px;
   left: 10px;
+}
+
+#coord{
+  font-size: 2rem;
+  padding-top: 10px;
+  line-height: 1;
 }
 
 #about section {
@@ -104,8 +109,9 @@ const viewCV = () => {
 }
 
 #about h6 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
+  text-align: right;
 }
 
 #about section article:last-child li {
@@ -114,8 +120,9 @@ const viewCV = () => {
 }
 
 #about section article:last-child li p,
-#about section article:last-child li a {
-  font-size: 1.3rem;
+#about section article:last-child li a,
+#about section article:last-child li span {
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -159,7 +166,7 @@ const viewCV = () => {
   #about > section {
     height: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
   #about section article:last-child {

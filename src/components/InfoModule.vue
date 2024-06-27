@@ -3,7 +3,6 @@
     <!-- Modal -->
     <div id="myModal" class="modal" :class="{ show: modalOpen }">
       <div class="modal-content">
-        <!-- <span class="close" @click="closeModal">&times;</span> -->
         <p id="modal-text">{{ modalContent }}</p>
       </div>
     </div>
@@ -32,29 +31,25 @@ const infoItems = ref([
     id: 'time',
     title: 'Time',
     iconClass: 'icon-time',
-    content:
-      "Le temps est une ressource inestimable que j'utilise avec soin. Je m'engage à gérer efficacement mon temps pour garantir des livraisons de projets ponctuelles et de haute qualité. Mon approche rigoureuse et structurée me permet de respecter les délais tout en maintenant un haut niveau de performance."
+    content: "Le temps est une ressource inestimable que j'utilise avec soin. Je m'engage à gérer efficacement mon temps pour garantir des livraisons de projets ponctuelles et de haute qualité. Mon approche rigoureuse et structurée me permet de respecter les délais tout en maintenant un haut niveau de performance."
   },
   {
     id: 'work',
     title: 'Work',
     iconClass: 'icon-briefcase',
-    content:
-      'Mon travail en tant que développeur full-stack junior est le reflet de ma passion et de mon engagement dans le domaine du développement web. J\'ai participé à divers projets, allant de la création de sites web dynamiques à des applications mobiles intuitives. Explorez ma section "Projets" pour voir des exemples concrets de mes réalisations, incluant des technologies telles que HTML, CSS, JavaScript, Vue.js, et Laravel.'
+    content: 'Mon travail en tant que développeur full-stack junior est le reflet de ma passion et de mon engagement dans le domaine du développement web. J\'ai participé à divers projets, allant de la création de sites web dynamiques à des applications mobiles intuitives. Explorez ma section "Projets" pour voir des exemples concrets de mes réalisations, incluant des technologies telles que HTML, CSS, JavaScript, Vue.js, et Laravel.'
   },
   {
     id: 'smart',
     title: 'Smart',
     iconClass: 'icon-coffee',
-    content:
-      "J'aime transformer des défis techniques en solutions intelligentes. Mon esprit analytique et ma capacité à apprendre rapidement me permettent de concevoir et d'implémenter des solutions innovantes qui répondent aux besoins des utilisateurs tout en optimisant les processus existants. Mon objectif est d'utiliser la technologie de manière stratégique pour créer une valeur ajoutée significative."
+    content: "J'aime transformer des défis techniques en solutions intelligentes. Mon esprit analytique et ma capacité à apprendre rapidement me permettent de concevoir et d'implémenter des solutions innovantes qui répondent aux besoins des utilisateurs tout en optimisant les processus existants. Mon objectif est d'utiliser la technologie de manière stratégique pour créer une valeur ajoutée significative."
   },
   {
     id: 'vision',
     title: 'Vision',
     iconClass: 'icon-leaf',
-    content:
-      "Je crois en une vision qui anticipe et s'adapte aux évolutions technologiques. Mon ambition est de développer des solutions numériques qui non seulement répondent aux besoins actuels, mais qui sont également prêtes à évoluer avec les futures tendances et exigences du marché. Je suis passionné par l'innovation et déterminé à contribuer à des projets ambitieux et visionnaires."
+    content: "Je crois en une vision qui anticipe et s'adapte aux évolutions technologiques. Mon ambition est de développer des solutions numériques qui non seulement répondent aux besoins actuels, mais qui sont également prêtes à évoluer avec les futures tendances et exigences du marché. Je suis passionné par l'innovation et déterminé à contribuer à des projets ambitieux et visionnaires."
   }
 ])
 
@@ -174,7 +169,7 @@ window.onclick = function (event) {
   overflow: hidden;
   margin: 10px 0;
   padding: 10px;
-  background-color: #181818;
+  background-color: #333;
   border: 1px solid #ddd;
   border-radius: 10px 20px;
 }
@@ -189,22 +184,32 @@ window.onclick = function (event) {
 
 .read-more {
   position: absolute;
-  bottom: 5px;
+  top: 5px;
   right: 5px;
   display: block;
   margin-top: 0;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
+  padding: 8px;
+  background-color: #fd7e14;
+  color: #333;
+  font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px 15px 10px 10px;
   cursor: pointer;
+  animation: pulse 1s infinite alternate; /* Animation de pulsation */
 }
 
 .read-more:hover {
-  background-color: #0056b3;
+  background-color: #e86100;
 }
 
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 
 @media (min-width: 768px) {
   #info-module {
@@ -224,7 +229,7 @@ window.onclick = function (event) {
 
 @media (min-width: 1024px) {
   #info-module {
-    width: 60%;
+    width: 70%;
   }
 }
 </style>

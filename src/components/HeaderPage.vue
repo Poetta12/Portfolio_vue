@@ -2,7 +2,7 @@
   <header>
     <div id="header-container">
       <div class="logo">
-        <img src="@/assets/logos/WDS_logo_white-150x123.png" alt="Logo de votre site" />
+        <img src="/public/logo/WDS_logo_white-150x123.png" alt="Logo de votre site" />
       </div>
       <ul id="header-reseaux">
         <li><a href="https://www.poettatech.fr" class="icon-profile"></a></li>
@@ -44,16 +44,40 @@ const closeMenu = () => {
 <style scoped>
 /* Styles spécifiques au composant */
 header {
-  position: sticky; /* Rendre le header fixe */
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Assurez-vous qu'il est au-dessus d'autres contenus */
+  z-index: 1000;
   padding: 1rem;
   background-color: #333;
   color: #fff;
+  height: 10vh;
+}
+
+header::before,
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc((100% - 60%) / 2);
+  background-color: #333;
+  z-index: -1;
+}
+
+header::before {
+  left: 0;
+}
+
+header::after {
+  right: 0;
+}
+
+/* Pour ajuster le box-shadow */
+header::before,
+header::after {
   box-shadow: 0 0 80px 100px #333;
-  margin: -15px;
 }
 
 #header-reseaux {
@@ -207,6 +231,13 @@ header {
   #header-reseaux a {
     font-size: 2rem;
   }
+
+  header::before,
+  header::after {
+    box-shadow: none;
+  }
+
+  
 
 }
 </style>

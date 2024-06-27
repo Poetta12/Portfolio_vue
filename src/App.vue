@@ -24,7 +24,6 @@ import '@/assets/Icomoon/style.css'
 
 #app-body{
   width: 60%;
-  height: 90vh;
   margin: auto;
   background-color: #333;
   box-shadow: 0 0 80px 100px #333;
