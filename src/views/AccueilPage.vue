@@ -18,14 +18,14 @@ h1 {
   color: white;
 }
 
-#accueil-intro{
+#accueil-intro {
   padding-top: 30px;
 }
 
-#accueil-intro h1{
+#accueil-intro h1 {
   font-size: 4rem;
 }
-#accueil-intro h2{
+#accueil-intro h2 {
   font-size: 2.5rem;
 }
 #accueil-intro h1 span {
@@ -36,6 +36,5 @@ h1 {
   font-size: 0.8rem;
 }
 @media (max-width: 768px) {
-  
 }
 </style>

@@ -33,11 +33,8 @@
         <section id="cv-container" class="cv-download">
           <h2>CV</h2>
           <div>
-            <!-- Utilisation de router-link pour naviguer vers /cv -->
-            <router-link to="/cv" @click="closeMenu">
-              <button class="icon-eye-plus"></button>
-            </router-link>
-            <button class="icon-document-download1" @click="downloadCV"></button>
+            <button id="goCV" class="icon-eye" @click="viewCV"></button>
+            <button class="icon-download2" @click="downloadCV"></button>
           </div>
         </section>
       </article>
@@ -47,12 +44,11 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
 
 const downloadCV = () => {
-  const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
+  //const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
+  const pdfUrl =
+    'https://drive.google.com/file/d/17YlNwXMS51f5C5qWoNrWkZtd0Xzp-5Zv/view?usp=drive_link'
   const link = document.createElement('a')
   link.href = pdfUrl
   link.setAttribute('download', 'CV-Pedro_Costa.pdf')
@@ -61,9 +57,9 @@ const downloadCV = () => {
   document.body.removeChild(link)
 }
 
-const closeMenu = () => {
-  // Éventuellement, vous pouvez implémenter ici la logique pour fermer un menu
-  // si nécessaire lorsque l'utilisateur clique sur le bouton Consulter.
+const viewCV = () => {
+  const pdfUrl = 'public/docs/CV-Pedro_Costa.pdf'
+  window.open(pdfUrl, '_blank')
 }
 </script>
 
@@ -80,13 +76,13 @@ const closeMenu = () => {
 #profil-photo {
   position: relative;
   background: #d3d5e1;
-  width: 200px;
-  height: 145px;
+  width: 250px;
+  height: 195px;
   border-radius: 100% 100% 0 0;
 }
 
 #profil-photo img {
-  max-width: 175px;
+  max-width: 225px;
   position: absolute;
   top: -30px;
   left: 10px;
@@ -142,31 +138,28 @@ const closeMenu = () => {
   text-align: left;
 }
 
-section#cv-container {
+#cv-container div {
   display: flex;
 }
-
 #about section#cv-container {
   width: 100%;
   flex-direction: row;
   place-content: space-between;
   padding: 10px 0 0;
 }
-
-#cv-container button {
-  margin: 0;
+.cv-download button {
+  margin: 0.5rem;
   padding: 0.5rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
   color: #333;
   background-color: #fdc17b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 75px;
 }
 
-#cv-container .cv-download button:hover {
+.cv-download button:hover {
   background-color: #555;
   color: #fdc17b;
 }
