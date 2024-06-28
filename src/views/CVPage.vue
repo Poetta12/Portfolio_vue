@@ -263,6 +263,9 @@ body {
 #left-side ul {
   list-style: none;
 }
+#left-side .education ul li{
+  padding-bottom: 10px;
+}
 
 #left-side ul li a {
   padding-left: 10px;
@@ -279,6 +282,19 @@ body {
   width: 65%;
   background: #fff;
   order: 2; /* Initialement après le left side */
+}
+
+#right-side ul {
+  list-style: none;
+}
+
+#right-side ul ul{
+  padding-left: 20px;
+  list-style: disclosure-closed;
+}
+
+#right-side li::marker {
+  color: #fdc17b;;
 }
 
 header {

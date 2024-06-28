@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>Bienvenue chez <span>PoettaTech WSDS</span></h2>
     <h2>Contact</h2>
     <p>Contactez-moi via le formulaire ci-dessous :</p>
     <form @submit.prevent="handleSubmit" id="contact_form">
@@ -149,14 +150,21 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+h2:first-child{
+  font-size: 2rem;
+}
+
 h2,
+h2 > span,
 p {
   color: #f2f3eb;
 }
 
-body {
-  background: #f2f3eb;
+h2 span{
+  color: #fdc17b;
+  font-size: 2.5rem;
 }
+
 
 h2,
 p button {
@@ -362,7 +370,6 @@ textarea {
     align-items: center;
     place-content: space-evenly;
   }
-
 }
 
 @media screen and (max-width: 480px) {
