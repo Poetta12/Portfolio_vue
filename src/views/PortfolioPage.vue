@@ -66,7 +66,7 @@
           dolore magna aliqua. </p>
           <a href="/public/projects/6.johndoe-responsive-20240628T090705Z-001/6.johndoe-responsive/2-3-4-johndoe-responsive.html">Voir plus</a>
         </div>
-      </article>
+      </article>  
 
       <article id="huit" class="module">
         <figure>
