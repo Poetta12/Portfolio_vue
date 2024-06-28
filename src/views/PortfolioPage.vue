@@ -39,7 +39,7 @@
         <figure>
           <img class='item' src="/public/projects/1.MyFood-20240628T090622Z-001/1.MyFood/MyFood.png" alt="My Food">
         </figure>
-        <div>
+        <div> 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. </p>
           <a href="/public/projects/1.MyFood-20240628T090622Z-001/1.MyFood/01.MyFood.html">Voir plus</a>
