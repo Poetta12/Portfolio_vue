@@ -57,31 +57,36 @@
           required
         ></textarea>
       </div>
-      <div class="recaptcha">
-        <div class="g-recaptcha" data-sitekey="6LfcPQMqAAAAAB5-L1sVv4dmQEZoh7fLM6HTh4co"></div>
+
+      <div id="recaptcha">
+        <div  class="g-recaptcha" :data-sitekey="'6LfcPQMqAAAAAB5-L1sVv4dmQEZoh7fLM6HTh4co'" data-callback="onReCAPTCHASuccess"></div>
+
+        <div class="submit">
+          <input type="submit" value="Envoyer le message" id="form_button" />
+        </div>
       </div>
-      <div class="submit">
-        <input type="submit" value="Envoyer le message" id="form_button" />
-      </div>
+
     </form>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
 
-const name = ref('')
-const email = ref('')
-const telephone = ref('')
-const subject = ref('')
-const message = ref('')
-let recaptchaResponse = ref('')
+const name = ref('');
+const email = ref('');
+const telephone = ref('');
+const subject = ref('');
+const message = ref('');
+let recaptchaResponse = ref('');
+
+const siteKey = '6LepFwMqAAAAANgtDc_gjxqNSUULLIhT8Y94ivlc'; // Remplacez par votre propre clé de site
 
 const handleSubmit = async () => {
   if (!recaptchaResponse.value) {
-    alert('Veuillez compléter le reCAPTCHA.')
-    return
+    alert('Veuillez compléter le reCAPTCHA.');
+    return;
   }
 
   const formData = {
@@ -90,47 +95,49 @@ const handleSubmit = async () => {
     telephone: telephone.value,
     subject: subject.value,
     message: message.value,
-    'g-recaptcha-response': recaptchaResponse.value
-  }
+    'g-recaptcha-response': recaptchaResponse.value,
+  };
 
   try {
-    const response = await axios.post('https://formspree.io/f/mjkbbqko', formData)
+    const response = await axios.post('https://formspree.io/f/mjkbbqko', formData);
     if (response.status === 200) {
-      alert('Votre message a été envoyé avec succès!')
-      clearForm()
+      alert('Votre message a été envoyé avec succès!');
+      clearForm();
     } else {
-      alert('Une erreur est survenue. Veuillez réessayer plus tard.')
+      alert('Une erreur est survenue. Veuillez réessayer plus tard.');
     }
   } catch (error) {
-    alert('Une erreur est survenue. Veuillez réessayer plus tard.')
-    console.error(error)
+    alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+    console.error(error);
   }
-}
+};
 
 const clearForm = () => {
-  name.value = ''
-  email.value = ''
-  telephone.value = ''
-  subject.value = ''
-  message.value = ''
-  recaptchaResponse.value = ''
+  name.value = '';
+  email.value = '';
+  telephone.value = '';
+  subject.value = '';
+  message.value = '';
+  recaptchaResponse.value = '';
   if (window.grecaptcha) {
-    window.grecaptcha.reset()
+    window.grecaptcha.reset();
   }
-}
+};
 
 onMounted(() => {
-  const script = document.createElement('script')
-  script.src = 'https://www.google.com/recaptcha/api.js'
-  script.async = true
-  script.defer = true
+  const script = document.createElement('script');
+  script.src = 'https://www.google.com/recaptcha/api.js';
+  script.async = true;
+  script.defer = true;
   script.onload = () => {
+    console.log("reCAPTCHA script loaded");
     window.onReCAPTCHASuccess = (response) => {
-      recaptchaResponse.value = response
-    }
-  }
-  document.head.appendChild(script)
-})
+      console.log("reCAPTCHA response:", response);
+      recaptchaResponse.value = response;
+    };
+  };
+  document.head.appendChild(script);
+});
 </script>
 
 <style scoped>
@@ -337,11 +344,25 @@ textarea {
   color: #f2f3eb;
 }
 
+#recaptcha{
+  display: flex;
+  align-items: center;
+  place-content: space-evenly;
+  }
+
 @media screen and (max-width: 768px) {
   #container {
     margin: 20px auto;
     width: 95%;
   }
+
+  #recaptcha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: space-evenly;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -362,6 +383,7 @@ textarea {
   h1 {
     font-size: 18px;
   }
+
 
   .icon {
     height: 35px;
