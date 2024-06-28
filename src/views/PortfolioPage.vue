@@ -15,23 +15,23 @@
 
       <article id="deux" class="module">
         <figure>
-          <img class='item' src="/public/projects/11.0.beverages/11.0.beverages/beverages-travail-en-groupe/Contact.png">
+          <img class='item' src="/public/projects/beverages/beverages/beverages-travail-en-groupe/Contact.png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">
         </figure>
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. </p>
-          <a href="/public/projects/11.0.beverages-20240628T090916Z-001/11.0.beverages/beverages-contact.html">Voir plus</a>
+          <a href="/public/projects/beverages/beverages/beverages-travail-en-groupe/beverages-contact.html">Voir plus</a>
         </div>
       </article>
 
       <article id="trois" class="module">
         <figure>
-          <img class='item' src="/public/projects/10.0.git-20240628T100101Z-001/10.0.git/projet-git/MY_ART.png" alt="My Art">
+          <img class='item' src="/public/projects/my_art/my_art/my_art/MY_ART.png" alt="My Art">
         </figure>
-        <div>
+        <div>   
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod   tempor incididunt ut labore et
           dolore magna aliqua. </p>
-          <a href="/public/projects/10.0.git-20240628T100101Z-001/10.0.git/projet-git/index.html">Voir plus</a>
+          <a href="/public/projects/my_art/my_art/my_art/index.html">Voir plus</a>
         </div>
       </article>
 

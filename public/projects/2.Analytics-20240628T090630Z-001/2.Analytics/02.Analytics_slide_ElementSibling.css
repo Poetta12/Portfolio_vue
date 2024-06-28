@@ -1,0 +1,651 @@
+@font-face{
+font-family: "Raleway-Regular";
+src: url("analytics/font/Raleway-Regular.ttf") format("truetype");
+}    
+*{padding:0;
+  margin:0;
+  box-sizing: border-box;
+}html{
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body{
+  font-size: calc( 1.4em + 1vw);
+  background: #f1f1f1;
+  font-family: "Raleway-Regular";
+}
+img{
+  max-width: 100%;
+}
+header{
+  display:flex;
+  justify-content: space-between;
+  background: black;
+  height: 50px;
+  color: white;
+  padding: 10px;
+}
+header button{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+}
+h5{
+  font-size: 20px;
+}
+section{
+  padding: 40px 0;
+}
+/***********NAV*************/
+nav{
+  background: rgba(0, 0, 0, 50%);
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  animation-name: navi;
+  animation-duration: 2s;
+  height: 100vh;
+}
+nav div#menu{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+}
+nav > div{
+  animation-name: menuRideau;
+  animation-duration: 2s;
+  position:relative;
+  background: white;
+  padding-top: 20px;
+  width:350px;
+  height: 100vh;
+  animation-delay: 2s;
+  left:-100%;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+nav section{
+  padding-bottom: 40px;
+  padding-top: 0;
+}
+nav div figure img{
+  width: 50px;
+  border-radius:50px;
+}
+nav section div:last-child{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+nav section figure img{
+  width: 1.5em;
+}
+nav div ul{
+  padding-top: 20px;
+}
+nav div ul li{
+  list-style: none;
+  padding: 10px;
+}
+nav div ul li a{
+  text-decoration: none;
+  padding:10px;
+  color: black;
+}
+nav div ul li:hover{
+  background:royalblue;
+  color: white;
+  padding: 10px 10px;
+}
+nav div ul li a:hover{
+  color: white;
+}
+nav div ul li img{
+  width: 1.5em;
+}
+nav h5{
+  padding: 0 20px;
+}
+@keyframes menuRideau{
+  to{ left: 0; opacity:1;}
+}
+@keyframes navi{
+  from{top:50px; opacity: 0}
+  to{top: 50px; opacity: 1}
+}
+/***********MAIN***********/
+main{
+  padding: 0 20px;
+}
+main h4{
+  margin: 20px 0 10px 0;
+}
+main article#red{
+  display: flex;
+  justify-content: space-between;
+  background: red;
+  padding: 20px 20px;color: white;
+  font-size: 20px;
+}
+article#red figure img{
+  width: 70px;
+}
+main article#blue{
+  display: flex;
+  justify-content: space-between;
+  background: blue;
+  padding: 20px 20px;
+  color: white;
+  font-size: 20px;
+}
+article#blue figure img{
+  width: 70px;
+}
+main article#green{
+  display: flex;
+  justify-content: space-between;
+  background: green;
+  padding: 20px 20px;
+  color: white;
+  font-size: 20px;
+}
+article#green figure img{
+  width: 70px;
+}
+article#green figure figcaption{
+  color: white;
+}
+main article#orange{
+  display: flex;
+  justify-content: space-between;
+  background: orange;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+}
+article#orange figure img{
+  width: 70px;
+}
+/***********STATS***********/
+main section h5{
+  padding: 10px 0 10px 0;
+}
+main section article div.visitors{
+  background: gray;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+main section article div.visitors div{
+  animation-name: stats25;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+  background: green;
+  width: 25%;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  color: white;
+}
+main .stats article div > p {
+  animation-name: casual;
+  animation-duration: 1s;
+}
+
+main section article div.users{
+  background: gray;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+main section article div.users div{
+  animation-name: stats50;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+  background: orange;
+  width: 50%;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  color: white;
+}
+main section article div.rate{
+  background: gray;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+main section article div.rate div{
+  animation-name: stats75;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+  background: red;
+  width: 75%;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  color: white;
+}
+@keyframes stats25{
+  0% {width: 0}
+  100% {width: 25%}
+}
+@keyframes stats50{
+  0% {width: 0}
+  100% {width: 50%}
+}
+@keyframes stats75{
+  0% {width: 0}
+  100% {width: 75%}
+}
+@keyframes casual{
+  0% {opacity:0}
+  100% {opacity: 0}
+}
+
+/***********REGIONS***********/
+section.regions figure img{
+  width: 100%;
+}
+/***********FEEDS***********/
+section.feeds{
+  margin: 0 0 50px 0;
+}
+section.feeds article:nth-of-type(odd){
+  background: white;
+}
+section.feeds article figure img{
+  width: 20px;
+  margin-right: 30px;
+}
+section.feeds article{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 50px 5px 20px;
+}
+section.feeds article div{
+  display:flex;
+  justify-content: space-between;
+}
+/***********COUNTRIES***********/
+section.countries article{
+  display:flex;
+  justify-content: space-between;
+  padding: 5px 70px 5px 20px;
+}
+section.countries article:nth-of-type(odd){
+  background: white;
+}
+/***********MORE COUNTRIES***********/
+section.button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  margin: 20px 0;
+  padding: 10px 0;
+  color: white;
+}
+section.button img{
+  width:40px;
+  padding: 0 0 0 10px;
+}
+/***********RECENT USERS***********/
+section.users div{
+  box-shadow: 1px 1px 10px #666;
+}
+section.users article{
+  display: flex;
+  align-items: center;
+  background: white;
+}
+section.users article:last-child{
+  border-top: 2px solid lightgray;
+}
+section.users article figure img{
+  width: 30px;
+  border-radius: 30px;
+  margin: 10px 20px 10px 20px;
+}
+/***********RECENT COMMENTS***********/
+section.comment article figure img{
+  width: 70px;
+  border-radius: 40px;
+}
+section.comment article div{
+  padding: 10px 0 20px 0;
+}
+section.comment article div div{
+  display:flex;
+  align-items: center;
+}
+section.comment article div p:nth-of-type(2){
+  font-size: 12px;
+  color: grey;
+  padding: 0 0 10px 10px;
+}
+section.comment h5{
+  padding: 40px 0 0 0;
+}
+/****SLIDE****/
+section.comment > div{
+  height: 35vh;
+}
+.carousel{
+  width: 100%;
+  position: relative;
+}
+.carousel_inner{
+  width: 100%;
+  position: relative;
+}
+.item{
+  width: 100%;
+  position: absolute;
+}
+.comment button{
+  background: black;
+  color: white;
+  font-size: 1em;
+  padding: 1% 2%;
+  border-radius: 50px;
+  position: absolute;
+  top: 25%;
+  cursor: pointer;
+}
+#left{
+  left: 1%;
+}
+#right{
+  right: 1%;
+}
+
+.mouvNext{
+  animation-name: mouv0_-150;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.mouvNext1{
+  animation-name: mouv150_0;
+  animation-timing-function: cubic-bezier(.86,0,.4,1.72);
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.mouvPrev{
+  animation-name: mouv0_150;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.mouvPrev1{
+  animation-name: mouv-150_0;
+  animation-timing-function: cubic-bezier(.86,0,.4,1.72);
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.boutonOpPlus{
+  animation-name: opacityPlus;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.boutonOpMoins{
+  animation-name: opacityMoins;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes mouv0_-150{
+  from{transform: translateX(0);}
+  to{transform: translateX(-150%);}
+}
+@keyframes mouv150_0{
+  from{transform: translateX(150%);}
+  to{transform: translateX(0);}
+}
+@keyframes mouv0_150{
+  from{transform: translateX(0);}
+  to{transform: translateX(150%);}
+}
+@keyframes mouv-150_0{
+  from{transform: translateX(-150%);}
+  to{transform: translateX(0);}
+}
+@keyframes opacityPlus{
+  from{opacity: 1}
+  to{opacity: 0}
+}
+@keyframes opacityMoins{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+.hide{
+  display: none;
+}
+/***********FOOTER***********/
+footer section{
+  padding: 0 20px 20px 20px;
+}
+footer section:first-child{
+  background: #616161;
+  color: white;
+  padding: 0 20px 20px;
+}
+footer section:first-child article h5{
+  border-bottom: 4px solid red;
+  padding: 30px 0 0 0;
+}
+footer section:first-child article:first-child h5{
+  border-color: green;
+}
+footer section:first-child article:last-child h5{
+  border-color: orange;
+}
+footer section:first-child article p{
+  padding: 8px 0;
+  font-size: 16px;
+}
+footer section:last-child h5{
+  padding: 20px 0;
+}
+footer section:last-child a{
+  color: black;
+}
+
+@media screen and (min-width: 768px){
+
+/***********HEADER***********/
+
+header button{
+  display: none;
+}
+header{
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+h5{
+  font-size: 1.5em;
+}
+
+/***********AFTER BODY***********/
+
+#corps{
+  display: flex;
+  width: 100%;
+}
+#membre{
+  width: 75%;
+  margin-left: 25%;
+}
+
+/***********NAV***********/
+nav{
+  background: rgba(0, 0, 0, 0);
+  width: 25%;
+  /*position: static;*/
+  animation-name: none;
+  height: 100vh;
+}
+nav.hide{
+  display: block;
+  z-index: 1;
+}
+nav > div{
+  position: fixed;
+  top: 50px;
+  width: 25%;
+  height: 100%;
+  animation-name: none;
+  opacity: 1;
+  left: 0;
+}
+nav section p{
+  font-size: 0.7em;
+}
+/***********DASHBOARD***********/
+section#dashboard{
+  display: flex;
+}
+section#dashboard article{ 
+  margin: 0 1px;
+  width: 25%;
+}
+main #dashboard article#red{
+  color: transparent;
+}
+main #dashboard article#red:hover{
+  color: white;
+}
+main #dashboard article#blue{
+  color: transparent;
+}
+main #dashboard article#blue:hover{
+  color: white;
+}
+main #dashboard article#green{
+  color: transparent;
+}
+main #dashboard article#green:hover{
+  color: white;
+}
+main #dashboard article#orange{
+  color: transparent;
+}
+main #dashboard article#orange:hover{
+  color: white;
+}
+/***********REGIONS***********/
+section.regions figure{
+  width:100%;
+}
+.regions{
+  width: 40vw;
+  margin: 0 1%;
+}
+
+/***********FEED***********/
+#regFeed{
+  display: flex;
+  width: 100%;
+}
+.feeds{
+  width:70%;
+}
+section.countries article:nth-of-type(2n+1):hover{
+  background: gray;
+}
+.countries article:hover{
+  background: gray;
+  color: white;
+}
+
+/***********BUTTON MORE COUNTRIES***********/
+section.button{
+  width: 50%;
+}
+section.button h5{
+  font-size: 1em;
+}
+section.button:hover{
+  background: lightgray;
+  color: black;
+}
+section.button:hover img{
+  animation-name: countries;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes countries{
+  from{translate:0;}
+  to{translate:100%;}
+}
+
+/***********FEEDS***********/
+section.feeds{
+  width: 80%;
+}
+section.users article figure img {
+  width: 20%;
+  border-radius: 100%;
+}
+section.users article p{
+  width: 80%;
+}
+
+/***********RECENT USERS***********/
+section.users article{
+  padding: 1% 0;
+}
+
+/***********COMMENTS***********/
+.comment article{
+  /*display: flex;
+  align-items: center;*/
+}
+.comment article > div{
+  flex-direction: column;
+  margin-left: 10%;
+  width: 80vw;
+}
+section.comment article div{
+  align-items: flex-start;
+}
+section.comment article div p:nth-of-type(2){
+  font-size: 1em;
+  color: grey;
+  padding: 0 0 10px 10px;
+}
+section.comment article figure img{
+  width: 100%;
+  border-radius: 100%;
+}
+section.comment article figure{
+  width: 10%;
+}
+
+.hide{
+  display: none;
+}
+
+
+/***********DEMOGRAPHIC***********/
+#demo{
+  display: flex;
+}
+#demo h5{
+  font-size: 1.2em;
+}
+
+#demo article{
+  width: 33%;
+  margin: 0 1%;
+}
+/***********FOOTER***********/
+
+footer section:first-child article p{
+  font-size: 1em;
+}
+/***********CLASS***********/
+.block{
+  display: block;
+}
+
+
+}

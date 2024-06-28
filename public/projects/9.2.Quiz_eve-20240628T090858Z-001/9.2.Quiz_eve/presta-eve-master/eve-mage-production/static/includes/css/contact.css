@@ -1,0 +1,350 @@
+/* ------------------
+---------------------
+--- GLOBAL RULES ----
+---------------------
+---------------------*/
+h2{
+	font-size: 2.5em;
+}
+h3 {
+	font-size: 2em;
+}
+strong {
+	font-family: 'Montserrat Bold';
+}
+.container-fluid {
+	padding-left: unset;
+	padding-right: unset;
+}
+/* ------------------
+------- END ---------
+--- GLOBAL RULES ----
+---------------------
+---------------------*/
+section#introduction {
+	background-color: var(--app-color-yellow);
+	padding-top: 3em;
+  padding-bottom: 3em;
+}
+section .container-img {
+	width: 80px;
+	height: 80px;
+	display: inline-flex;
+}
+section .title-inline {
+	color: var(--app-color-orange);
+}
+section .formuleve {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+	position: relative;
+	transition: .5s;
+}
+section .formuleve label {
+	width: 48.81111111%;
+	margin-bottom: 2em;
+	position: relative;
+	height: 30px;
+}
+section .formuleve label[for=data-share] {
+	width: 100%;
+}
+section .formuleve label input:not([type=submit]):not([type=checkbox]) {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	position: relative;
+	top: 0;
+	left: 0;
+	border: .1em solid var(--app-color-violetblue);
+	z-index: 2;
+	cursor: pointer;
+	padding: .25rem 2rem;
+	width: 100%;
+	padding-left: .8em;
+	color: var(--app-color-violetblue);
+}
+section .formuleve label input:-internal-autofill-selected {
+	background-color: rgb(255, 255, 255)!important;
+	color: var(--app-color-violetblue);
+}
+section .formuleve label span {
+	color: var(--app-color-violetblue);
+	opacity: .8;
+	position: absolute;
+	display: inline-block;
+	width: 20%;
+	top: -1px;
+	left: 10px;
+	padding: .45em .25em;
+	z-index: -1;
+	color: var(--app-color-violetblue);
+	transition: .15s cubic-bezier(1, .755, .25, 1);
+}
+section .formuleve label span.share {
+	width: 100%;
+}
+section .formuleve label span.share.full {
+	width: auto;
+}
+section .formuleve label input:focus ~ span::before,
+section .formuleve label textarea:focus ~ span::before, 
+section .formuleve label input ~ span.full::before,
+section .formuleve label textarea ~ span.full::before   {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: -1px;
+	border-bottom: .3em solid var(--app-color-violet);
+}
+section .formuleve label input ~ span.full::before,
+section .formuleve label textarea ~ span.full::before  {
+	border-bottom: .3em solid var(--app-color-pink);
+}
+section .formuleve label input:focus ~ span,
+section .formuleve label textarea:focus ~ span,
+section .formuleve label input ~ span.full,
+section .formuleve label textarea ~ span.full {
+	top: -1.25em;
+	height: 25px;
+	opacity: 1;
+	z-index: 2;
+	background: white;
+	padding: .05em .25em;
+}
+section .formuleve label[for$='freeText'] {
+	width: 98%;
+}
+section .formuleve label[for=data-share] {
+	transition: 0s;
+}
+section .formuleve label[for=data-share] input:focus ~ span,
+section .formuleve label[for=data-share] input ~ span.full,
+section .formuleve label[for=data-share] input:focus ~ span::before,
+section .formuleve label[for=data-share] input ~ span.full::before {
+	top: 0;
+	border: none;
+	padding: .45em .25em;
+}
+section .formuleve label[for=data-share] input ~ span.full::before{
+	top: 0;
+}
+section .formuleve label textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 80px;
+	padding: .25rem 2rem;
+	background: transparent;    
+	position: relative;
+	color: var(--app-color-violetblue);
+	top: 0;
+	left: 0;
+	border: .1em solid var(--app-color-violetblue);
+	z-index: 2;
+	cursor: pointer;	
+	padding-left: .8em;
+	margin-bottom: 3em;
+}
+section .formuleve label input:not([type=checkbox]):focus,
+section .formuleve label textarea:focus {
+	outline: none;
+	border: .25em solid var(--app-color-pink)!important;
+}
+section .formuleve label input:focus,
+section .formuleve label textarea:focus {
+	outline: none;
+}
+section .formuleve #file_upload {
+  display:none;
+}
+section .formuleve .new_Btn {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: .1em solid var(--app-color-violetblue);
+  z-index: 2;
+  cursor: pointer;
+  padding: .25rem 2rem;
+  padding-left: .8em;
+  color: var(--app-color-violetblue);
+}
+section .formuleve .label-submit {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 2em;
+	position: relative;
+	height: 30px;	
+}
+input[type='submit'] {
+	width: 200px;
+	background: transparent;
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	top: 90%;
+	color: var(--app-color-violetblue);
+	border: 1px solid var(--app-color-violetblue);
+	z-index: 10;
+	height: 80px;
+}
+input[type='submit']:hover {
+	background: var(--app-color-pink);
+	color: white;
+}
+@media (min-width: 601px) and (max-width: 1500px) {
+	section .formuleve label:not(label[for=data-share]):not(label[for$='freeText']) {
+		width: 49.5%;
+	}
+} 
+@media (max-width: 600px) {
+	section .formuleve label {
+		width: 100%;
+		margin-bottom: 1.85em;
+	}
+	section .formuleve label span {
+		width: 92%;
+	}
+} 
+.container-formuleve div[id^=form] {
+	display: none;
+}
+.container-formuleve div[id^=form].active {
+	display: inherit;
+	position: relative;
+}
+.container-formuleve .help-eval.active::after, 
+.container-formuleve .i-have-a-question.active::after,
+.container-formuleve .good-practices.active::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 20%;
+}
+.container-formuleve .help-eval.active::after {
+	left: 0;
+	top: 0;
+	border-bottom: .1em solid var(--app-color-violetblue); 
+	border-left: .1em solid var(--app-color-violetblue);
+}
+.container-formuleve .i-have-a-question.active::after {
+	top: 0;
+	left: 0%;
+	width: 33.5%;
+	border-top: .1em solid var(--app-color-violetblue); 
+	border-left: .1em solid var(--app-color-violetblue);
+	border-bottom: .1em solid var(--app-color-violetblue);
+}
+.container-formuleve .good-practices.active::after {
+	top: 0;
+	right: 0;
+	border-right: .1em solid var(--app-color-violetblue); 
+	border-bottom: .1em solid var(--app-color-violetblue);
+}
+.container-formuleve .good-practices input[type='submit'] {
+	top: 80%;
+} 
+.container-formuleve .target-form span {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  top: 0;
+  left: 0;
+  border: .1em solid var(--app-color-violetblue);
+  cursor: pointer;
+  padding: .25rem 2rem;
+  padding-left: .8em;
+  color: var(--app-color-violetblue);
+  transition: .15s;
+  font-size: .8em;
+  font-weight: bold
+}
+.container-formuleve .target-form span.active {
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 125%;
+	font-size: 1em;
+}
+.container-formuleve .target-form span {
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom: none;
+	border-right-color: transparent;
+}
+@media (max-width: 1500px) {
+	.container-formuleve .target-form span {
+		padding: .5em 1em 1.5em 1em;
+	}
+	.container-formuleve .target-form span {
+	  font-size: .8em;
+	}
+	.container-formuleve .target-form span.active {
+		font-size: 1em;
+	}
+	section .formuleve {
+		padding-top: 2em;
+	}
+	section .formuleve label span {
+		width: 25%;
+	}
+	section .formuleve label[for='file-uploads'] {
+		width: 60%;
+	}
+}
+@media (max-width: 1220px) {
+	section .formuleve label span {
+		width: 35%;
+	}
+	section .formuleve label[for='file-uploads'] {
+		width: 65%;
+	}
+}
+@media (max-width: 1180px) {
+	section .formuleve label[for='file-uploads'] {
+		height: 80px;
+	}
+}
+@media (max-width: 991px) {
+	.app-padding-x {
+		padding-left: 10%!important;
+		padding-right: 10%!important;
+	}
+	.container-formuleve .target-form {
+		flex-direction: column;
+	}
+	.container-formuleve .target-form span:nth-child(1) {
+		padding: .5em 1em 3.5em 1em;
+	}
+	.container-formuleve .target-form span:nth-child(1).active {
+		padding: .5em 1em 1.5em 1em;
+	}
+	section .formuleve,
+	section .formuleve label textarea {
+		height: unset;
+	}
+	section .formuleve label span {
+		width: 60%;
+	}
+	section .formuleve label[for='file-uploads'] {
+		width: 100%;
+		/*height: 100px*/
+	}
+	.container-formuleve .i-have-a-question.active::after {
+		width: 24%;
+	}
+}
