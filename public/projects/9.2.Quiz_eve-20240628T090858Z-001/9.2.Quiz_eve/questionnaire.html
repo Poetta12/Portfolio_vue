@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <meta charset="utf-8" />
+ <title>Questionnaire</title>
+ <link rel="stylesheet" type="text/css" href="questionnaire.css">
+ <link href="Icomoon/css/icomoon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ***********NAV************** -->
+  <nav>
+    <button id="openMenu">☰</button>
+    <div class="hide">
+      <ul>
+        <li><a href="">Accueil</a></li>
+        <li><a href="">Découvrir la MaGE</a></li>
+        <li><button id="demarrerMenu">Démarrer l'évaluation</button></li>
+        <li><a href="">Consulter les ressources</a></li>
+        <li><a href="">Le collectif et ses partenaires</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ***********HEADER************** -->
+  <header id = 'header'>
+    <div>
+      <h1><span>éve</span><br>L'évaluateur du vivre ensemble</h1>
+    </div>
+    <section>
+      <article>
+        <h6>éve permet aux associations de s'interroger sur leurs pratiques au regard de 3 piliers du vivre ensemble : lutter contre l'exclusion, partager les savoirs, agir pour l'écologie.</h6>
+        <p>
+        Cet outil vous permet de réaliser une introspection "positive" et d'imaginer des améliorations grâce à l'échange de bonnes pratiques entre acteurs.</p>
+        <p>Enfin, vous pouvez réaliser vous-mêmes cette évaluation ou contacter le collectif inter-associatif jeunesse afin d'être aiguillé sur le contenu et optimiser l'évaluation.</p>
+      </article>
+      <div class="buttons">
+        <button id="contact">Nous contacter</button>
+        <button id="demarrer">C'est parti</button>
+      </div>
+    </section>
+  </header>  
+
+  <main>
+
+    <!-- ********1ère SECTION******** -->
+
+    <section id='section1' class="hide">
+      <article>
+        <h6>Comment ça marche</h6>
+        <p>
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo.</p>
+        
+        <div class="bandeau">
+          <p><span class="bold">éve</span> L'évaluateur du vivre ensemble</p>
+          <h3>1 - Lutter contre l'exclusion</h3>
+        </div>
+
+        <div class="progress">
+          <input id="progress_1" type="range" name="niveau" min="0" max="13" value="0">
+        </div>
+
+        <h4>Permettre la participation de tous aux action</h4>
+      </article>
+
+      <form name="questionnaireUn" id="questionnaireUn">
+        <div class="question">
+          <h6><span class="rose">1)</span> Les singularités sont-elles prises en compte dans les actions?</h6>
+          <p>Minorités : personnes à mobilité réduite, handicap social, âge, territoire, maîtrise du numérique, maîtrise de la lecture et de l'écriture, millieu social, diplôme et parcours scolaire, maîtrise de la langue, genre appartenance religieuse...</p>
+        </div>
+        <fieldset>
+          <input type='radio' id="q1r1" name="q1" value="1" required><label for="q1r1">1</label>
+          <input type='radio' id="q1r2" name="q1" value="2"><label for="q1r2" required>2</label>
+          <input type='radio' id="q1r3" name="q1" value="3" required><label for="q1r3">3</label>
+          <input type='radio' id="q1r4" name="q1" value="4" required><label for="q1r4">4</label>
+          <input type='radio' id="q1r5" name="q1" value="5" required><label for="q1r5">5</label>
+        </fieldset>
+
+        <div class="question">
+          <h6><span class="rose">2)</span> Durant la conception d'un projet, prend-on le temps de connaître chacun?</h6>
+        </div>
+        <fieldset>
+          <input type='radio' id="q2r1" name="q2" value="1" required><label for="q2r1">1</label>
+          <input type='radio' id="q2r2" name="q2" value="2"><label for="q2r2">2</label>
+          <input type='radio' id="q2r3" name="q2" value="3"><label for="q2r3">3</label>
+          <input type='radio' id="q2r4" name="q2" value="4"><label for="q2r4">4</label>
+          <input type='radio' id="q2r5" name="q2" value="5"><label for="q2r5">5</label>
+        </fieldset>
+
+        <div class="question">
+          <h6><span class="rose">3)</span> Les actions sont-elles accessibles aux minorités*?</h6>
+        </div>
+        <fieldset>
+          <input type='radio' id="q3r1" name="q3" value="1" required><label for="q3r1">1</label>
+          <input type='radio' id="q3r2" name="q3" value="2"><label for="q3r2">2</label>
+          <input type='radio' id="q3r3" name="q3" value="3"><label for="q3r3">3</label>
+          <input type='radio' id="q3r4" name="q3" value="4"><label for="q3r4">4</label>
+          <input type='radio' id="q3r5" name="q3" value="5"><label for="q3r5">5</label>
+        </fieldset>
+      </form>
+
+      <div class="buttons">
+        <button id="precedent1">Précedent</button>
+        <button id="suivant1">Suivant</button>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ********2ème SECTION******** -->
+  
+  <section id='section2' class="hide">
+    <article>
+      <div class="bandeau">
+        <p><span class="bold">éve</span> L'évaluateur du vivre ensemble</p>
+        <h3>2 - Partager les savoirs</h3>
+      </div>
+
+      <div class="progress">
+        <input id="progress_2" type="range" name="niveau" min="0" max="13"value="0">
+      </div>
+
+      <h4>S'engager dans l'apprentissage tout au long de sa vie, sans conditions de ressources, de parcours ou de localité</h4>
+    </article>
+
+    <form name="questionnaireDeux" id="questionnaireDeux">
+
+      <div class="question">
+        <h6><span class="rose">1)</span> Vos activités induisent et développent des savoirs et compétences. Les avez-vous identifiés?</h6>
+        <p>Par exemple : dans une association de tricot, les membres développent entre autres leur motricité fine, leur créativité, des connaissances techniques ou encore le calcul mental.</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q4r1" name="q4" value="1" required><label for="q4r1">1</label>
+        <input type='radio' id="q4r2" name="q4" value="2"><label for="q4r2">2</label>
+        <input type='radio' id="q4r3" name="q4" value="3"><label for="q4r3">3</label>
+        <input type='radio' id="q4r4" name="q4" value="4"><label for="q4r4">4</label>
+        <input type='radio' id="q4r5" name="q4" value="5"><label for="q4r5">5</label>
+      </fieldset>
+
+      <div class="question">
+        <h6><span class="rose">2)</span> Avez-vous formalisé ces compétences et savoirs?</h6>
+        <p>Par exemple : il existe un texte de type référentiel de compétences permettant la Valorisation des Acquis de l'Expérience, VAE ?</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q5r1" name="q5" value="1" required><label for="q5r1">1</label>
+        <input type='radio' id="q5r2" name="q5" value="2"><label for="q5r2">2</label>
+        <input type='radio' id="q5r3" name="q5" value="3"><label for="q5r3">3</label>
+        <input type='radio' id="q5r4" name="q5" value="4"><label for="q5r4">4</label>
+        <input type='radio' id="q5r5" name="q5" value="5"><label for="q5r5">5</label>
+      </fieldset>
+
+      <div class="question">
+        <h6><span class="rose">3)</span> Avez-vous valorisé ces compétences et savoirs?</h6>
+        <p>Par exemple : vous communiquez dessus en interne et en externe?</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q6r1" name="q6" value="1" required><label for="q6r1">1</label>
+        <input type='radio' id="q6r2" name="q6" value="2"><label for="q6r2">2</label>
+        <input type='radio' id="q6r3" name="q6" value="3"><label for="q6r3">3</label>
+        <input type='radio' id="q6r4" name="q6" value="4"><label for="q6r4">4</label>
+        <input type='radio' id="q6r5" name="q6" value="5"><label for="q6r5">5</label>
+      </fieldset>
+
+      <div class="question">
+        <h6><span class="rose">4)</span> Est-ce que votre structure permet d'apprendre tout au long de la vie?</h6>
+        <p>Pensez aux types de publicstouchés ou accueillis pas vos actions.</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q7r1" name="q7" value="1" required><label for="q7r1">1</label>
+        <input type='radio' id="q7r2" name="q7" value="2"><label for="q7r2">2</label>
+        <input type='radio' id="q7r3" name="q7" value="3"><label for="q7r3">3</label>
+        <input type='radio' id="q7r4" name="q7" value="4"><label for="q7r4">4</label>
+        <input type='radio' id="q7r5" name="q7" value="5"><label for="q7r5">5</label>
+      </fieldset>
+
+      <div class="question">
+        <h6><span class="rose">5)</span> Cherche-t-on à toucher des personnes en rupture de parcours?</h6>
+        <p>Seniors isolés, décrochage scolaire, réinsertion professionnelle.</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q8r1" name="q8" value="1" required><label for="q8r1">1</label>
+        <input type='radio' id="q8r2" name="q8" value="2"><label for="q8r2">2</label>
+        <input type='radio' id="q8r3" name="q8" value="3"><label for="q8r3">3</label>
+        <input type='radio' id="q8r4" name="q8" value="4"><label for="q8r4">4</label>
+        <input type='radio' id="q8r5" name="q8" value="5"><label for="q8r5">5</label>
+      </fieldset>
+
+      <div class="question">
+        <h6><span class="rose">6)</span> Des actions en partenariat avec des structures éducatives sont-elles mises en places?</h6>
+        <p>Ecoles, centres de loisirs, associations d'éducation papulaire.</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q9r1" name="q9" value="1" required><label for="q9r1">1</label>
+        <input type='radio' id="q9r2" name="q9" value="2"><label for="q9r2">2</label>
+        <input type='radio' id="q9r3" name="q9" value="3"><label for="q9r3">3</label>
+        <input type='radio' id="q9r4" name="q9" value="4"><label for="q9r4">4</label>
+        <input type='radio' id="q9r5" name="q9" value="5"><label for="q9r5">5</label>
+      </fieldset>
+
+      <div class="question">
+        <h6><span class="rose">7)</span> Des lieux, physiques ou virtuels, de diffusion et d'échange des savoirs, accessibles à tous sont-ils proposés?</h6>
+        <p>Plateforme en ligne, réseaux sociaux, évenements, tiers-lieu...</p>
+      </div>
+      <fieldset>
+        <input type='radio' id="q10r1" name="q10" value="1"><label for="q10r1" required>1</label>
+        <input type='radio' id="q10r2" name="q10" value="2"><label for="q10r2">2</label>
+        <input type='radio' id="q10r3" name="q10" value="3"><label for="q10r3">3</label>
+        <input type='radio' id="q10r4" name="q10" value="4"><label for="q10r4">4</label>
+        <input type='radio' id="q10r5" name="q10" value="5"><label for="q10r5">5</label>
+      </fieldset>
+
+    </form>
+    <div class="buttons">
+      <button id="precedent2">Précedent</button>
+      <button id="suivant2">Suivant</button>
+    </div>
+
+</section>
+
+<!-- ********3ème SECTION********** -->
+
+<section id='section3' class="hide">
+  <article>
+
+    <div class="bandeau">
+      <p><span class="bold">éve</span> L'évaluateur du vivre ensemble</p>
+      <h3>3 - Agir pour l'écologie</h3>
+    </div>
+
+    <div class="progress">
+      <input id="progress_3" type="range" name="niveau" min="0" max="13" value="0">
+    </div>
+
+    <h4>Promouvoir une écologie qui rassemble</h4>
+  </article>
+
+  <form name="questionnaireTrois" id="questionnaireTrois">
+
+    <div class="question">
+      <h6><span class="rose">1)</span> Est-ce que ces actions sont connues par toutes et tous au sein de votre structure?</h6>
+    </div>
+    <fieldset>
+      <input type='radio' id="q11r1" name="q11" value="1" required><label for="q11r1">1</label>
+      <input type='radio' id="q11r2" name="q11" value="2"><label for="q11r2">2</label>
+      <input type='radio' id="q11r3" name="q11" value="3"><label for="q11r3">3</label>
+      <input type='radio' id="q11r4" name="q11" value="4"><label for="q11r4">4</label>
+      <input type='radio' id="q11r5" name="q11" value="5"><label for="q11r5">5</label>
+    </fieldset>
+
+    <div class="question">
+      <h6><span class="rose">2)</span> Ces actions s'adressent-elles à l'ensemble des membres de votre structure?</h6>
+    </div>
+    <fieldset>
+      <input type='radio' id="q12r1" name="q12" value="1" required><label for="q12r1">1</label>
+      <input type='radio' id="q12r2" name="q12" value="2"><label for="q12r2">2</label>
+      <input type='radio' id="q12r3" name="q12" value="3"><label for="q12r3">3</label>
+      <input type='radio' id="q12r4" name="q12" value="4"><label for="q12r4">4</label>
+      <input type='radio' id="q12r5" name="q12" value="5"><label for="q12r5">5</label>
+    </fieldset>
+
+    <div class="question">
+      <h6><span class="rose">3)</span> Un accompagnement, une formationn ou une sensibilisation aux questions écologiques est-elle proposée?</h6>
+    </div>
+    <fieldset>
+      <input type='radio' id="q13r1" name="q13" value="1" required><label for="q13r1">1</label>
+      <input type='radio' id="q13r2" name="q13" value="2"><label for="q13r2">2</label>
+      <input type='radio' id="q13r3" name="q13" value="3"><label for="q13r3">3</label>
+      <input type='radio' id="q13r4" name="q13" value="4"><label for="q13r4">4</label>
+      <input type='radio' id="q13r5" name="q13" value="5"><label for="q13r5">5</label>
+    </fieldset>
+  </form>
+
+  <div class="buttons">
+    <button id="precedent3">Précedent</button>
+    <button id="theEnd" type="submit" onsubmit="return validation()">Fini, à vos résultats !</button>
+  </div>
+</form>
+</section>
+
+<!-- **********4ème SECTION********** -->
+<section id='section4' class="hide">
+  <article>
+    <div class="bandeau">
+      <p><span class="bold">éve</span> L'évaluateur du vivre ensemble</p>
+      <h3>Résultats</h3>
+    </div>
+  </article>
+  <h3>1 - Lutter contre l'exclusion</h3>
+  <article class="resultat" id="res_1">
+    
+    <div>
+      <p>1 à 2</p>
+      <div id="result_1_1"></div>
+    </div>
+    <div>
+      <p>3 à 4</p>
+      <div id="result_1_2"></div>
+    </div>
+    <div>
+      <p>5</p>
+      <div id="result_1_3"></div>
+    </div>
+    
+  </article>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna.</p>
+  <h3>2 - Partage des savoirs</h3>
+  <article class="resultat" id="res_2">
+    
+    <div>
+      <p>1 à 2</p>
+      <div id="result_2_1"></div>
+    </div>
+    <div>
+      <p>3 à 4</p>
+      <div id="result_2_2"></div>
+    </div>
+    <div>
+      <p>5</p>
+      <div id="result_2_3"></div>
+    </div>
+
+  </article>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna.</p>
+  <h3>3 - Agir pour l'écologie</h3>
+  <article class="resultat" id="res_3">
+    
+    <div>
+      <p>1 à 2</p>
+      <div  id="result_3_1"></div>
+    </div>
+    <div>
+      <p>3 à 4</p>
+      <div id="result_3_2"></div>
+    </div>
+    <div>
+      <p>5</p>
+      <div id="result_3_3"></div>
+    </div>
+
+  </article>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna.</p>
+
+  <div id="resultG">
+    <h3>Résultat global</h3>
+    <span></span>
+  </div>
+
+  <article id="descripUn" class="descrip">
+    <div><p class="icon-frown-o:before">1 à 2</p></div>
+    <div><h5>Bon, on va pas se mentir, c'est pas génial...</h5>
+      <p>On peut se dire qu'il y a du travail mais vous alliez voir, ce n'est pas insurmontable!</p>
+      <p>Rdv sur la page de partage des bonnes pratiques pour trouver de l'inspiration. Souvent de petites choses peuvent changer significativement l'impact de nos actions</p>
+    </div>
+  </article>
+
+  <article id="descripDeux" class="descrip">
+    <div><p class="icon-meh-o:before">3 à 4</p></div>
+    <div><h5>Ben c'est pas trop mal, il y a déjà une base!</h5>
+      <p>Du coup on va continuer sur cette lancée et trouver les moyens pour améliorer encore plus tout ça! Vu que vous êtes bien partis, ça ne devrait pas être trop compliqué.</p>
+    </div>
+  </article>
+
+  <article id="descripTrois" class="descrip">
+    <div><p class="icon-smile-o:before">5</p></div>
+    <div><h5>Alors là, chapeau bas!</h5>
+      <p>Etant donné que vous semblez avoir une base solide, n'hésitez pas à nous partager vos mises en place et les actions que vous pouvez réaliser!</p>
+      <p>D'autres acteurs pourraient y trouver l'inspiration nécessaire pour améliorer leurs pratiques.</p>
+    </div>
+  </article>
+  <div class="buttons">
+    <button class="retour">Retour au questionnaire</button>
+    <button class="consulter">consulter les ressources</button>
+  </div>
+</article>
+</section>
+</main>
+
+<div id="modal" class="hide">
+<section>
+  <article>
+    <p>Vous devez répondre à toutes les questions avant d'avancer!</p>
+    <button id="mod_button">D'accord</button>
+  </article>
+</section>
+</div>
+
+<script type="text/javascript" src="questionnaire.js"></script>
+</body>
+</html> 

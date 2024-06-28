@@ -1,0 +1,138 @@
+
+.is-hidden {
+  display: none!important;
+}
+
+/*|==============================================|
+  |                                              |
+  |       BOOSTRAP RESPONSIVE BREAKPOINTS        |
+  |                                              |
+  |                 sm : 576 px                  |
+  |                 md : 768 px                  |
+  |                 lg : 992 px                  |
+  |                 xl : 1200 px                 |
+  |                                              |
+  |==============================================| */
+
+
+
+/*________________________________________________
+  ________________________________________________ */
+
+
+
+
+/*||==============================================||
+  ||==============================================||
+  ||                                              ||
+  ||   HIDE / DISPLAY RULES UPON SCREEN SIZE      ||
+  ||                                              ||
+  ||                                              ||
+  ||   PLEASE, NO CHANGES OR INSERTIONS HERE !!!  ||
+  ||                                              ||
+  ||==============================================||
+  ||==============================================|| */
+
+
+/*|==============================================|
+  |                                              |
+  |          HIDE ONLY OVER BREAKPOINTS          |
+  |                                              |
+  |==============================================| */
+
+@media (min-width: 320px) {
+  /* Extra-small hiding */
+  .hide-xs {
+    display: none!important;
+  }
+}
+@media (min-width: 500px) {
+  .hide-s { /* Display only on extra-small and superior */
+    display: none!important;
+  }
+}
+@media (min-width: 576px) {
+  .hide-sm {
+    display: none!important;
+  }
+}
+@media (min-width: 768px) {
+  .hide-md {
+    display: none!important;
+  }
+}
+@media (min-width: 992px) {
+  .hide-lg {
+    display: none!important;
+  }
+}
+@media (min-width: 1200px) {
+  .hide-xl {
+    display: none!important;
+  }
+}
+
+/*|==============================================|
+  |                                              |
+  |       DISPLAY ONLY BELOW BREAKPOINTS         |
+  |                                              |
+  |==============================================| */
+
+@media (max-width: 319px) {
+  .display-xs { /* Display only on extra-small and superior */
+    display: none!important;
+  }
+}
+@media (max-width: 575px) {
+  .display-sm { /* Display only on sm and superior */
+    display: none!important;
+  }
+}
+@media (max-width: 767px) {
+  .display-md { /* Display only on md and superior */
+    display: none!important;
+  }
+}
+@media (max-width: 991px) {
+  .display-lg { /* Display only on lg and superior */
+    display: none!important;
+  }
+}
+@media (max-width: 1199px) {
+  .display-xl { /* Display only on xl and superior */
+    display: none!important;
+  }
+}
+
+/*|==============================================|
+  |                                              |
+  |            DISPLAY INTERVALS ONLY            |
+  |                                              |
+  |==============================================| */
+
+@media  (max-width: 575px), (min-width: 1200px) {
+  .display-sm-to-xl { /* Display interval */
+    display: none!important;
+  }
+}
+@media  (max-width: 767px), (min-width: 992px) {
+  .display-md-to-xl { /* Display interval */
+    display: none!important;
+  }
+}
+
+/*|==============================================|
+  |                                              |
+  |             FLEX DISPLAY ORDER               |
+  |                                              |
+  |==============================================| */
+
+@media (min-width: 576px) {
+  .sm-order-last {
+    order: 1000;
+  }
+}
+
+/* ==== END OF DO NOT MODIFY ==== */
+
+

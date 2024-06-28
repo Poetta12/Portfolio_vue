@@ -1,0 +1,336 @@
+@font-face{
+  font-family: "Inconsolata";
+  src: url("cafe-js/font/Inconsolata-Regular.ttf") format("truetype");
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata";
+}
+html{
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+ }
+
+body{
+  font-size: calc( 1.4em + 1vw);
+  text-align: justify;
+  background: #f7f5f1;;
+}
+img{
+  max-width: 100%;
+}
+p, time, address{
+  font-size: 1em;
+}
+h4{
+  color: white;
+  margin: 60px 0;
+  text-align: center;  
+  font-size: 1.5em;    
+}
+h4 span{
+  background: black;
+  padding: 5px;
+  font-size: 1em;   
+}
+button{
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+figure{
+  text-align: center;
+}
+
+/**********NAV**********/
+nav > ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background: black;
+  padding: 20px 50px;
+}
+nav > ul > li > a{
+ color: white;
+ text-decoration: none;
+}
+/**********HEADER**********/     
+header{
+  background-image: url(cafe-js/assets/coffeehouse.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > h1{
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+header > section > time{
+  left: 20px;
+  background: black;
+  padding: 5px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+}
+header > section > address{
+  right: 20px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+}
+/**********MAIN**********/
+main{
+  margin: 0 40px;
+}
+main > section > p{
+  padding: 10px 0;
+}
+main section#intro article{
+  background: rgba(0, 0, 0, 5%);
+  border-left: 4px solid rgba(0, 0, 0, 40%) ;
+  padding: 20px;
+  margin: 10px 0;
+}
+main section article div{
+  padding-bottom: 10px;
+}
+q{
+  font-style: italic;
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+cite{
+  font-style: normal;
+  font-size: 1em;
+  padding-top: 10px;
+}
+/**********COORDONNEES**********/
+#coordonnees figure{
+  margin-bottom: 20px;
+}
+#coordonnees address{
+  margin-top: 20px;
+}
+/**********THE MENUS**********/
+section#menu > div{
+  box-shadow: 1px 1px 10px #555;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+#menu div div:first-child{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.decor{
+  border: none;
+  font-size: 1.5em;
+  background: black;
+  color: white;
+  padding: 2px 15px 4px;
+}
+div.menulist{
+  box-shadow: 1px 1px 10px #555;
+  margin: 20px 10px;
+  padding: 0 20px 20px;
+  background: white;
+}
+div.menulist h6{
+  padding: 40px 0 20px;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+div.menulist p{
+  color: gray;
+}
+/**********WHERE TO FIND US**********/
+#where li{
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+#where h4{
+  margin: 20px 0;
+}
+section#where > div > article > div{
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  position: absolute;
+  background: rgba(255, 255, 255, 50%);
+  height: 360px;
+}
+#where div > article > div{
+  padding-top: 40px;
+}
+#where > div > article li img{
+  width: 30px;
+  margin-right: 20px;
+}
+/**********FAQ**********/
+#faq button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  margin: 10px 0;
+  font-size: 1em;
+  padding: 10px;
+}
+#faq button::after {
+  content: "+";
+  background: black;
+  color: white;
+  padding: 4px 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+#faq .after::after{
+  content: "-";
+  background: black;
+  color: white;
+  padding: 4px 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+/**********FOOTER**********/
+footer{
+  background: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+footer ul{
+  display: flex;
+}
+footer ul{
+  display: flex;
+}
+footer figure{
+  width: 8vw;
+}
+
+footer img{
+  padding: 50px 5px;
+}
+/**********CLASS**********/
+.bold{
+  font-weight: bolder;
+}
+.hide{
+  display: none;
+}
+
+
+@media screen and (min-width: 768px){
+body{
+  background: #f7f5f1;
+}
+main{
+  width: 60vw;
+  margin: auto;
+}
+button{
+  font-size: 2em;
+}
+p, q, cite, time, address{
+  font-size: 1em;
+}
+h4 span{
+  font-size: 0.8em;   
+}
+img{
+  padding-top: 10px;
+}
+/*********ABOUT*********/
+#justo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#justo article{
+  width: 20%;
+  margin: 0 1em;
+}
+#about img{
+  width: 50%;
+}
+#about p{
+  width:70%;
+  margin: 0 15%;
+}
+/*********MENU*********/
+div.menulist h6{
+  font-size: 1em;
+}
+div.menulist p{
+  font-size: 1em;
+}
+.decor{
+  font-size: 1.5em;
+}
+/*********FOOTER*********/
+footer{
+  display: flex;
+  margin: 5%;
+}
+footer h6{
+  font-size: 2em;
+}
+footer section{
+  width: 35%;
+}
+footer > div{
+  width: 30%;
+}
+nav div#unique{
+  top: 100px;
+}
+footer figure{
+  width: 4vw;
+}
+
+/*********FAQ*********/
+#faq button{
+  font-size: 1em;
+
+}
+#faq button::after {
+  padding: 4px 10px;
+  font-size: 1em;
+}
+#faq .after::after{
+  padding: 4px 10px;
+  font-size: 1em;
+}
+/*********WHERE TO FIND US*********/
+section#where > div > article > div{
+  display: flex;
+  align-items: center;
+  position: static;
+  background: none;
+}
+section#where div article div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 15vh;
+}
+
+
+
+
+}
+

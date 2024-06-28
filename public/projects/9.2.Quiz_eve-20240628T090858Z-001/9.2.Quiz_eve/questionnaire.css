@@ -1,0 +1,575 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+html{
+	scroll-behavior:smooth;
+	font-size:62.5%;
+}
+body{
+	font-size:1.6em ;
+	text-align: left;
+}
+img{
+	max-width:100%;
+	width:100%;
+	display:block;
+}
+button{
+	border: 1px solid black;
+	border-radius: 30px 10px 30px 10px;
+	background: rgb(234, 241, 240);
+	padding: 3% 6%;
+	cursor: pointer;
+}
+button.active{
+	background: rgb(253, 75, 113);
+	color: white;
+}
+form input{
+	display: none;
+}
+
+/**********NAV***********/
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	text-align: center;
+	width: 100vw;
+	height: 10vh;
+	padding: 0 5%;
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+}
+nav button{
+	background: white;
+	border: none;
+	font-size: 3em;
+	padding: 0;
+}
+nav div{
+	background: lightgoldenrodyellow;
+	position: fixed;
+	top: 10vh;
+	width: 90%;
+	opacity: 0;
+	border-radius: 0 0 30px 30px ;
+}
+nav ul li{
+	padding: 3% 5%;
+	width: 100%;
+	list-style: none;
+	font-weight: bold;
+}
+nav ul li button{
+	background: rgb(234, 241, 240);
+	font-size: 1em;
+	color: black;
+	padding: 2%;
+	font-weight: bold;
+	border-radius: 30px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: black;
+	background: rgb(234, 241, 240);
+	padding: 2%;
+	border-radius: 30px;
+}
+
+/**********Header***********/
+header{
+	min-height: 90vh;
+	margin-top: 10vh;
+}
+header > div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	height: 30vh;
+	background: rgb(158, 226, 209);
+	padding: 0 5%;
+}
+header h1{
+	font-size: 1em;
+}
+header h1 span{
+	font-size: 5em;
+}
+
+header section{
+	margin: 5%;
+}
+header section article h6{
+	padding: 5% 0;
+	font-size: 1em;
+}
+header section article p{
+	padding: 5% 0;
+}
+header section article p{
+	padding: 5% 0;
+}
+
+/**********MAIN***********/
+#section1, #section2, #section3, #section4{
+	position: absolute;
+	top: 10vh;
+	z-index: -15;
+}
+main section{
+	margin: 0 5%;
+	padding-bottom: 10%;
+	background: white;
+}
+main section h6{
+	padding: 5% 0;
+	font-size: 1em;
+}
+main section h4{
+	color: rgb(253, 76, 114);
+}
+.bandeau p{
+	font-style: italic;
+	padding-bottom: 5% ;
+}
+
+/****FORM****/
+
+main section .progress input{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 5px;
+	margin: 5% 0;
+}
+main section .progress{
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 7px;
+	margin: 5% 0;
+}
+fieldset input{
+	display: none;
+}
+
+label {
+	display: inline-block;
+	background-color: white;
+	font-weight: bold;
+	border: 1px solid black;
+	padding: 20px 25px;
+	border-radius: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+main section form fieldset input{
+	border: 1px solid black;
+	border-radius: 100px;
+	padding: 2% 10%;
+	font-size: 2em;
+	background: white;
+	opacity: 1;
+}
+main section form fieldset input + label{
+	border-inline: 3px solid lightblue;
+}
+main section form fieldset input:checked + label:nth-of-type(1){
+	border-block: 3px solid red;
+}
+main section form fieldset input:checked + label:nth-of-type(2){
+	border-block: 3px solid red;
+}
+main section form fieldset input:checked + label:nth-of-type(3){
+	border-block: 3px solid orange;
+}
+main section form fieldset input:checked + label:nth-of-type(4){
+	border-block: 3px solid orange;
+}
+main section form fieldset input:checked + label:nth-of-type(5){
+	border-block: 3px solid green;
+}
+main section form fieldset div{
+	background: rgba(0, 0, 0, .3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border: 2px solid black;
+}
+main section form fieldset div label{
+	position: absolute;
+	z-index: -1;
+}
+main section form fieldset{
+	display: flex;
+	justify-content: space-around;
+	margin: 2% 0;
+	text-align: center;
+	border: none;
+	padding: 2% 0;
+}
+
+/*******RESULTATS********/
+main article.resultat{
+	margin: 5% 0 1%;
+}
+main #section4 > p{
+	margin-bottom: 5%;
+}
+main article.resultat > div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 40%;
+}
+main article.resultat > div p{
+	margin: 5% auto;
+	font-weight: bold;
+}
+main article.resultat div div{
+	width: 100px;
+	height: 20px;
+	background: rgb(234, 241, 240);
+	margin: 2%;
+}
+.rouge{
+	border: 2px solid red;
+}
+
+.orange{
+	border: 2px solid orange;
+}
+
+.vert{
+	border: 2px solid green;
+}
+
+#resultG{
+	display: flex;
+	align-items: center;
+}
+#resultG span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 120px;
+	height: 35px;
+	border: 5px solid orange;
+	margin-left: 5%;
+	color: black;
+	font-weight: bold;
+}
+
+article.descrip {
+	display: flex;
+	justify-content: space-between;
+	margin: 5% 0;
+	text-align: justify;
+	padding: 5%;
+	background: lightgrey;
+	color: gray;
+}
+
+article.descrip div h5{
+	font-size: 1em;
+}
+
+article.descrip div:first-child{
+	width: 20%;
+	align-self: center;
+	text-align: center;
+}
+
+article.descrip div:first-child p{
+	font-weight: bold;
+}
+
+article#descripUn div:first-child p:before {
+	content:"\f119" ;
+	display: block;
+	font-size: 3em;
+	margin-bottom: 10%;
+}
+
+article.descrip div:last-child{
+	width: 70%;
+}
+
+article.descrip div:last-child p{
+	font-size: .8em;
+}
+
+article#descripDeux div:first-child p:before {
+	content:"\f11a" ;
+	display: block;
+	font-size: 3em;
+	margin-bottom: 10%;
+}
+
+article#descripTrois div:first-child p:before {
+	content:"\f118" ;
+	display: block;
+	font-size: 3em;
+	margin-bottom: 10%;
+}
+
+article.actif p:before{
+	color: orange;
+}
+
+article.descrip.actif{
+	border: 5px solid orange;
+	background: white;
+	color: black;
+}
+
+/**********MODALs***********/
+
+#modal{
+	position: fixed;
+	top: 10vh;
+	width: 100vw;
+	height: 90vh;
+}
+#modal section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+}
+
+#modal article{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	border: 5px solid orange;
+	width: 50%;
+	height: 25%;
+}
+#modal article p{
+	padding: 5%;
+	text-align: center;
+	font-size: 1.1em;
+}
+#modal button{
+	background: lightgreen;
+}
+
+
+/**********CLASSES***********/
+
+.hide{
+	display: none;
+}
+.bold{
+	font-weight: bold;
+}
+.rose{
+	color: rgb(253, 76, 114);
+}
+
+.grayBackG{
+	background: lightgrey;
+}
+
+.colorOrange{
+	color: orange;
+}
+
+.redBorder{
+	border:3px solid red;
+}
+
+.orangeBorder{
+	border:3px solid orange;
+}
+
+.greenBorder{
+	border:3px solid green;
+}
+
+.bandeau{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	background: rgb(158, 226, 209);
+	padding: 5%;
+	margin: 5% 0;
+	font-size: 1em;
+}
+
+.precedent{
+	border: 1px solid black;
+	border-radius: 30px;
+	background: rgb(234, 241, 240);
+	padding: 5%;
+}
+
+.suivant{
+	border: 1px solid black;
+	border-radius: 30px;
+	background: rgb(234, 241, 240);
+	padding: 5%;
+}
+
+.buttons{
+	margin-top: 10%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.opacityIn{
+	animation-name: opacityIn;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.opacityOut{
+	animation-name: opacityOut;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.rightIn{
+	animation-name: rightIn;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+}
+
+.leftIn{
+	animation-name: leftIn;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 768px){
+
+	main section{
+	margin: 2% 5%;
+}
+
+nav{
+	height: 10vh;
+	padding: 0 5%;
+	border-bottom: 2px solid ;
+}
+
+	nav > button{
+	display: none;
+}
+
+nav div.hide{
+	display: flex;
+	align-items: center;
+	background: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10vh;
+	opacity: 1;
+	border-radius: 0;
+}
+nav div.opacityIn{
+	opacity: 1;
+}
+
+nav ul{
+	display: flex;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+}
+
+nav ul li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1%;
+	margin: 1%;
+	font-weight: normal;
+	color: black;
+	background: rgb(234, 241, 240);
+	border-radius: 30px;
+	font-size: 1em;
+}
+
+nav ul li button{
+	background: rgb(234, 241, 240);
+	font-size: 1em;
+	color: black;
+	padding: 5% 10%;
+	font-weight: normal;
+	border-radius: 20%;
+}
+
+nav ul li a{
+	color: black;
+	background: none;
+	padding: 0;
+	border-radius: 0;
+}
+
+/**********MAIN ORDI***********/
+label {
+	font-weight: bold;
+	border: 1px solid black;
+	padding: 10px 50px;
+	border-radius: 0;
+	cursor: pointer;
+}
+
+/**********RESULTATS ORDI***********/
+
+main article.resultat{
+	display: flex;
+	margin: 5% 0;
+}
+
+main #section4 > p{
+	margin-bottom: 5%;
+}
+
+}
+
+/**********CLASSES ORDI***********/
+.opacityInORDI{
+	animation-name: none;
+}
+
+
+/**********KEYFRAMES***********/
+
+@keyframes opacityIn{
+	from { opacity: 1 }
+	to { opacity: 0 }
+}
+
+@keyframes opacityOut{
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@keyframes rightIn{
+	from { transform:translate(200%);}
+	to { transform:translate(0);}
+}
+
+@keyframes leftIn{
+	from { transform:translate(-200%);}
+	to { transform:translate(0);}
+}
